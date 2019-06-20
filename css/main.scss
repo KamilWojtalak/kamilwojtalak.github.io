@@ -1,5 +1,6 @@
 $grid--breaker--2collumns: 1300px;
 $grid--breaker--1column: 950px;
+$font: 'Charmonman', cursive;
 
 * {
     box-sizing: border-box;
@@ -19,7 +20,7 @@ html {
         top: 35%;
         transform: translateY(-50%);
         font-size: 4.1em;
-        font-family: 'Charmonman', cursive;
+        font-family: $font;
         color: rgb(255, 255, 255)
     }
 
@@ -37,7 +38,7 @@ html {
         color: white;
         font-size: 1.5em;
         font-weight: bold;
-        font-family: 'Charmonman', cursive;
+        font-family: $font;
     }
 }
 
