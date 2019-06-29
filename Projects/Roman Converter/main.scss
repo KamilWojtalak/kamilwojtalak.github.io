@@ -1,0 +1,91 @@
+$bg-color: rgb(223, 128, 65);
+$bg-cta: rgb(253, 169, 113);
+$bg-main: rgb(235, 250, 255);
+$fs4: 5em; 
+$fm: 'Charmonman', cursive;
+$btn-fs: 2em;
+
+html {
+    scroll-behavior: smooth;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    position: relative;
+    height: 100vh;
+    background-color: $bg-color;
+
+    .header--h1 {
+        position: absolute;
+        top: 30%;
+        width: 100%;
+        color: #fcfcfc;
+        font-size: $fs4;
+        font-family: $fm;
+        text-align: center;
+
+        @media screen and (max-width: 650px) {
+            top: 17%;
+        }
+    }
+
+    .header--cta {
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        background-color: $bg-cta;
+        border: 5px solid white;
+        padding: 15px 40px;
+        border-radius: 20px;
+        font-size: $btn-fs;
+        color: white;
+        font-family: $fm;
+        cursor: pointer;
+
+        @media screen and (max-width: 650px) {
+            top: 75%;
+        }
+    }
+}
+.main {
+    height: 100vh;
+    background-color: $bg-main;
+    text-align: center;
+    padding-top: 10vh;
+    font-size: 1.3em;
+    
+    .main--label {
+        padding-right: 5vh;
+    }
+
+    .main--small {
+        padding-left: 5vh;
+        font-size: 0.5em;
+    }
+
+    .main--decimal {
+        margin: 0 auto;
+        padding: 10px;
+        border: 3px solid #28a6fa;
+
+    }
+
+    .main--btn {
+        margin-top: 5vh;
+        padding: 15px 40px;
+        border-radius: 20px;
+        border: 3px solid #7ec9fc;
+        background-color: white;
+        text-transform: capitalize;
+        cursor: pointer;
+    }
+
+    .main--outcome {
+        padding-top: 15vh;
+    }
+}

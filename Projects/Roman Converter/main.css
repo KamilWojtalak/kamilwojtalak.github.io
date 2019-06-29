@@ -1,0 +1,92 @@
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.header {
+  position: relative;
+  height: 100vh;
+  background-color: #df8041;
+}
+
+.header .header--h1 {
+  position: absolute;
+  top: 30%;
+  width: 100%;
+  color: #fcfcfc;
+  font-size: 5em;
+  font-family: "Charmonman", cursive;
+  text-align: center;
+}
+
+@media screen and (max-width: 650px) {
+  .header .header--h1 {
+    top: 17%;
+  }
+}
+
+.header .header--cta {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
+  background-color: #fda971;
+  border: 5px solid white;
+  padding: 15px 40px;
+  border-radius: 20px;
+  font-size: 2em;
+  color: white;
+  font-family: "Charmonman", cursive;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 650px) {
+  .header .header--cta {
+    top: 75%;
+  }
+}
+
+.main {
+  height: 100vh;
+  background-color: #ebfaff;
+  text-align: center;
+  padding-top: 10vh;
+  font-size: 1.3em;
+}
+
+.main .main--label {
+  padding-right: 5vh;
+}
+
+.main .main--small {
+  padding-left: 5vh;
+  font-size: 0.5em;
+}
+
+.main .main--decimal {
+  margin: 0 auto;
+  padding: 10px;
+  border: 3px solid #28a6fa;
+}
+
+.main .main--btn {
+  margin-top: 5vh;
+  padding: 15px 40px;
+  border-radius: 20px;
+  border: 3px solid #7ec9fc;
+  background-color: white;
+  text-transform: capitalize;
+  cursor: pointer;
+}
+
+.main .main--outcome {
+  padding-top: 15vh;
+}
+/*# sourceMappingURL=main.css.map */
