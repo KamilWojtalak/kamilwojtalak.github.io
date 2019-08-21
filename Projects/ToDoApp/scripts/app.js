@@ -1,8 +1,8 @@
 const dateAria = document.querySelector('.header-date');
 const list = document.querySelector('.todo--list');
-let input = document.querySelector('.task');
-let button = document.querySelector('.todo--bottom-submit');
-let form = document.querySelector('.form');
+const input = document.querySelector('.task');
+const button = document.querySelector('.todo--bottom-submit');
+const form = document.querySelector('.form');
 
 const checked = 'fa-checked';
 const unchecked = 'fa-check';
@@ -11,27 +11,25 @@ const lineThrough = 'done';
 //              DATE ARIA
 //              DATE ARIA
 //              DATE ARIA
-let dayOfWeekArray = ['Niedziela', 'Poniedziałek', 'Wtorek', 'Środa', 'Czwartek', 'Piątek', 'Sobota'];
 
-let MonthsArray = ['Styczeń', 'Luty', 'Marzec','Kwiecień', 'Maj', 'Czeriwec', 'Lipiec',
-                    'Sierpień', 'Wrzesień', 'Październik', 'Listopad', 'Grudzień']
 
-const date = new Date();
 
-const dayOfWeek = date.getDay();
-const dayOfMonth = date.getDate();
-const month = date.getMonth();
-const year = date.getFullYear();
-const hour = date.getHours();
-let minutes = date.getMinutes();
+let date = Intl.DateTimeFormat('pl', {
+    weekday: 'long',
+    month: 'long',
+    year: 'numeric'
+    } ).format( new Date());
 
-for (let i = 0; i < 10; i++) {
-    if (minutes == i) {
-        minutes = `0${i}`;
-    }
-}
+
+
+
+// if (minutes < 10) {
+//     minutes.padStart(2, '0');
+// }
+
+
 function getTime() {
-    return dateAria.textContent = `${hour}:${minutes} ${dayOfWeekArray[dayOfWeek]}/${MonthsArray[month]} ${dayOfMonth}/${month}/${year}`;
+    return dateAria.textContent = `${date}`;
 }
 getTime();
 setInterval(getTime, 1000);
@@ -46,9 +44,9 @@ function addItem(text) {
     clasSArray.push('Something that will take some space and generate array index');
     const item = `
                 <li class="todo--list--item clasS${clasS}">
-                <i class="fas fa-check "></i>
-                <span class="todo--list-text">${text}</span>
-                <i class="far fa-trash-alt"></i>
+                    <i class="fas fa-check "></i>
+                    <span class="todo--list-text">${text}</span>
+                    <i class="far fa-trash-alt"></i>
                 </li>`;
     
     
@@ -64,16 +62,13 @@ function completed(clasS){
         e.target.classList.toggle('fa-checked');
         e.target.nextElementSibling.classList.toggle('line-through');
         
-        // console.log(e.target.nextElementSibling.textContent);
-        // e.target.nextElementSibling.parentNode.toggle('span-checked');
-        // e.target.nextElementSibling.parentNode.toggle('line-through');
     }, false)
 }
 
 function deletingCover(clasS) {
     const deleteButton = document.querySelectorAll('.fa-trash-alt');
     deleteButton[clasS].addEventListener('click', (e) => {
-        e.target.parentNode.parentNode.removeChild(e.target.parentNode);
+        e.target.parentNode.remove();
         clasSArray.pop(clasS);
     }, false)
 }
@@ -81,25 +76,19 @@ function deletingCover(clasS) {
 
 
 
-button.addEventListener('click', () => {
-    if(input.value === '') {
-        return;
-    } else {
-        addItem(input.value);
+form.addEventListener('submit', (e) => {
+    if(input.value.trim() == '') {
+        e.preventDefault();
         input.value = '';
+    } else {
+        e.preventDefault();
+        addItem(input.value.trim());
+        input.value = '';
+        
     }
 });
 
-input.addEventListener('keyup', (e) => {
-    if (e.keyCode == 13) {
-        if(input.value === '') {
-            return;
-        } else {
-            addItem(input.value);
-            input.value = '';
-        }
-    }
-}); 
+
 
 let clasSArray = [];
 
@@ -109,4 +98,4 @@ let clasSArray = [];
 // Adding Secition Ended
 // Adding Secition Ended
 
-// DELETING
+
