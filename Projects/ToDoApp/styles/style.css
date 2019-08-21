@@ -28,6 +28,12 @@ body {
   text-shadow: 0 0 10px black;
 }
 
+@media screen and (max-width: 500px) {
+  .todo-app {
+    width: 90%;
+  }
+}
+
 .todo-app .header {
   display: -webkit-box;
   display: -ms-flexbox;
