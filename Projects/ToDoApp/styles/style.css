@@ -1,0 +1,182 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+  color: white;
+  font-family: 'Oswald', sans-serif;
+  letter-spacing: 2px;
+}
+
+body {
+  background: #ff5db1;
+  background: -webkit-gradient(left top, right top, color-stop(0%, #ff5db1), color-stop(100%, #03e1ed));
+  background: -webkit-gradient(linear, left top, right top, from(#ff5db1), to(#03e1ed));
+  background: linear-gradient(to right, #ff5db1 0%, #03e1ed 100%);
+}
+
+.todo-app {
+  position: relative;
+  width: 400px;
+  border: 10px solid #fff;
+  height: 90vh;
+  margin: 5vh auto;
+  background-color: rgba(255, 226, 226, 0.774);
+  border-radius: 10%;
+  text-shadow: 0 0 10px black;
+}
+
+.todo-app .header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  height: 15vh;
+  border-bottom: 3px solid white;
+  text-transform: uppercase;
+}
+
+.todo-app .header .header-title {
+  margin-top: 2vh;
+  font-weight: 400;
+  font-size: 2em;
+}
+
+.todo-app .header .header-date {
+  font-size: 1em;
+}
+
+.todo-app .todo--container {
+  width: 100%;
+  height: 65vh;
+  overflow: scroll;
+}
+
+.todo-app .todo--container::-webkit-scrollbar {
+  width: 1px;
+}
+
+.todo-app .todo--container .todo--list {
+  width: 100%;
+  height: 8vh;
+}
+
+.todo-app .todo--container .todo--list .todo--list--item {
+  border-bottom: 1px solid white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-flow: row nowrap;
+      flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  text-align: center;
+  margin-bottom: 1vh;
+  background-color: rgba(255, 255, 255, 0.479);
+  font-size: 1.1em;
+}
+
+.todo-app .todo--container .todo--list .todo--list--item i.fa-checked {
+  color: #0fb300;
+  border-right: 1px solid #0fb300;
+  width: 15%;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  cursor: pointer;
+}
+
+.todo-app .todo--container .todo--list .todo--list--item .span-checked {
+  color: #0fb300;
+}
+
+.todo-app .todo--container .todo--list .todo--list--item i.fa-check {
+  width: 15%;
+  border-right: 1px solid #fff;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  cursor: pointer;
+}
+
+.todo-app .todo--container .todo--list .todo--list--item .todo--list-text {
+  width: 80%;
+}
+
+.todo-app .todo--container .todo--list .todo--list--item .fa-trash-alted {
+  width: 15%;
+  cursor: pointer;
+  color: #ff2d2d;
+  border-left: 1px solid #ff2d2d;
+}
+
+.todo-app .todo--container .todo--list .todo--list--item .fa-trash-alt {
+  width: 15%;
+  border-left: 1px solid #fff;
+  cursor: pointer;
+}
+
+.todo-app .todo--container .todo--list .todo--list--item .fa-trash-alt:hover {
+  color: #ff2d2d;
+  border-left: 1px solid #ff2d2d;
+}
+
+.todo-app .todo--bottom {
+  position: absolute;
+  bottom: 4vh;
+  left: 7.5%;
+  width: 85%;
+  height: 5vh;
+}
+
+.todo-app .todo--bottom .task {
+  color: #313131;
+  padding: 10px;
+  width: 75%;
+  height: 100%;
+  border: none;
+  border-radius: 10px;
+}
+
+.todo-app .todo--bottom .todo--bottom-submit {
+  width: 20%;
+  padding: 5px 10px;
+  background-color: rgba(0, 149, 248, 0.705);
+  border: 2px solid white;
+  border-radius: 20px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.todo-app .todo--bottom .todo--bottom-submit:hover {
+  background-color: #72c6fd;
+}
+
+.line-through {
+  color: #0fb300;
+  text-decoration: line-through;
+  text-shadow: none;
+  font-weight: 500;
+}
+/*# sourceMappingURL=style.css.map */
