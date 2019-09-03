@@ -34,10 +34,8 @@ function Element(indexRoot, screenshootRoot, altText, titleText, githubLink) {
         const image = new Image();
         image.innerHTML = '<image />'
         image.classList.add(data.screenshot);
-        // image.setAttribute('src', this.screenshootRoot);
         image.src = this.screenshootRoot;
-
-        image.setAttribute('alt', this.altText);
+        image.alt = this.altText;
         const title = document.createElement('div');
         title.classList.add(data.block);
         title.textContent = this.titleText;
@@ -45,7 +43,7 @@ function Element(indexRoot, screenshootRoot, altText, titleText, githubLink) {
         // IDK I apologize
         linkContainer.classList.add(data.block);
         const secondLink = document.createElement('a');
-        secondLink.setAttribute('src', this.githubLink);
+        secondLink.setAttribute('href', this.githubLink);
         secondLink.textContent = 'GitHub';
 
         container.appendChild(firstAnchor);
@@ -59,12 +57,30 @@ function Element(indexRoot, screenshootRoot, altText, titleText, githubLink) {
 
 const ToDoApp = new Element(
     "../Projects/ToDoApp/index.html",
-    "Screenshot_3.png",
+    "screenshots/Screenshot_3.png",
     "ToDoApp",
     'Simple ToDoApp',
     "https://github.com/KamilWojtalak/kamilwojtalak.github.io/tree/master/Projects/ToDoApp"
 );
 
+const palindromeChecker = new Element(
+    "Projects/Palindrome Checker/index.html",
+    "screenshots/Screenshot_1.png",
+    "Palindrome Checker Image",
+    "Palindrome Checker",
+    "https://github.com/KamilWojtalak/Algorithms-from-FCC/blob/master/Palindrome%20Checker.js"
+)
+
+const romanConverter = new Element(
+    "Projects/Roman Converter/index.html",
+    "screenshots/Screenshot_2.png",
+    "Roman Converter Image",
+    "Roman Converter",
+    "https://github.com/KamilWojtalak/Algorithms-from-FCC/blob/master/Roman%20Converter.js"
+)
+
 window.onload = () => {
     ToDoApp.create();
+    palindromeChecker.create();
+    romanConverter.create();
 }
