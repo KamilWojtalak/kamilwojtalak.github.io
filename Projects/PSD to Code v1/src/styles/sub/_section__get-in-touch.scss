@@ -1,0 +1,55 @@
+.section__get-in-touch {
+    background-color: $bg__get-in-touch;
+    color: rgba(255, 255, 255, 0.897);
+    border-bottom: 1px solid rgb(21, 161, 255);
+    @media (min-width: $breakpoint) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 100px;
+    }
+    .get-in-touch__form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .form__input {
+            margin-bottom: 20px;
+            padding: 15px 10px;
+            width: 100%;
+            background-color: #273A71;
+            border: 2px solid #273A71;
+            border-radius: 4px;
+            color: white;
+
+            &::placeholder {
+                color: white;
+            }
+        }
+
+        .form__textarea {
+            min-height: 150px;
+        }
+
+        .form__submit {
+            margin-top: 20px;
+            padding: 15px 25px;
+            background-color: #273A71;
+            border: 2px solid #273A71;
+            border-radius: 4px;
+            text-transform: uppercase;
+            cursor: pointer;
+            color: rgba(255, 255, 255, 0.918);
+        }
+    }
+}
+
+
+// :O D:
+.section__get-in-touch {
+    
+    align-items: flex-start;
+    .section__title--description {
+        padding: 80px;
+        margin-left: 5vw;
+    }
+}

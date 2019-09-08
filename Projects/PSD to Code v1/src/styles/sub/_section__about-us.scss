@@ -1,0 +1,44 @@
+.section__about-us {
+    background-color: $bg__about-us;
+    color: rgba(255, 255, 255, 0.932);
+    
+    .review__container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+        .review__image {
+            width: 96px;
+            height: 96px
+        }
+
+        .review__text-container {
+            padding: 30px 0;
+            .text__review {
+                font-size: 18px;
+                padding-bottom: 10px;
+            }
+
+            .text__person {
+                
+                .person__name {
+                    color: rgb(255, 212, 72);
+                }
+
+                .person__position {
+                    color: #FFDD99;
+
+                }
+            }
+        }  
+    }
+}
+
+.about-us__container {
+    @media (min-width: $breakpoint) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 100px;
+    }
+}

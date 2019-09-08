@@ -1,0 +1,41 @@
+// STANDARD SECTION STYLING
+
+.section {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 0;
+    overflow: hidden;
+
+    .section__title--description {
+        width: 90%;
+        .section__header{ 
+            text-transform: uppercase;
+            padding-bottom: 20px;
+            font-size: 32px;
+            font-weight: 100;
+
+        }
+
+        .section__hr {
+            margin: 0 auto;
+            width: 20%;
+            border: 2px solid rgba(3, 83, 148, 0.486);
+            margin-bottom: 20px;
+            
+        }
+
+        .section__description {
+            font-size: 20px;
+        }
+    }
+
+    .section__main {
+        width: 90%;
+        padding: 40px;
+        align-self: center;
+
+    }
+}

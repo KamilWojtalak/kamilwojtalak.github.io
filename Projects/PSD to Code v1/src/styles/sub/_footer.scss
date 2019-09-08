@@ -1,0 +1,32 @@
+.footer {
+    background-color: $bg__footer;
+    .footer__container {
+        width: 90%;
+        margin: 0 auto;
+        .footer__list {
+
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+           
+            .footer__item {
+                text-align: center;
+                width: 50%;
+                .footer__link {
+                    display: block;
+                    color: #fff;
+                    font-size: 14px;
+                    padding: 15px 10px;
+                    background-color: #344B8E;
+                    
+                    &:hover {
+                        background-color: rgba(58, 80, 146, 0.733);
+                        text-decoration: none;  
+                    }
+                }
+            }
+        }
+    }
+}

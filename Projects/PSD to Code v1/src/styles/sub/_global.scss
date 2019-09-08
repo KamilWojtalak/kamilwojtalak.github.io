@@ -1,0 +1,24 @@
+// RESET PROPERTIES
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+    font-family: $font;
+}
+
+// STANDARD CALL TO ACTION ANCHOR STYLING
+
+.cta {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 20px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 100;
+    cursor: pointer;
+    width: 200px;
+    display: block;
+    color: white;
+    border-radius: 5px;
+}

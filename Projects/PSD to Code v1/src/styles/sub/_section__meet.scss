@@ -1,0 +1,41 @@
+.section__meet {
+    background-color: $bg__meet;
+    color: #3C4761;
+    
+    .main__section-meet {
+        @media (min-width: $breakpoint) {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 100px;
+        }
+    }
+    .main__person-container {
+
+        .person-container__photo {
+            padding: 40px 0 20px 0;
+        }
+
+        .person-container__name {
+            font-size: 24px;
+            padding-bottom: 2px;
+        }
+
+        .person-container__function {
+            font-size: 16px;
+        }
+        
+        .person-container__description {
+            padding: 15px 0;
+            font-size: 18px;
+        }
+
+        .person-container__socials_contianer {
+
+
+            .socials_container__icons {
+                cursor: pointer;
+                padding: 0 5px; 
+            }
+        }
+    }
+}

@@ -1,0 +1,33 @@
+// SERVICES STYLING
+
+.section__services {
+    background-color: $bg__services;
+    color: #fff;
+    .section__main-services {
+        @media (min-width: $breakpoint) {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 100px;
+        }
+    }
+    .services__container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+
+        .services__image {
+            padding: 40px 0;
+        }
+
+        .services__title {
+            font-size: 28px;
+            padding-bottom: 15px;
+        }
+        
+        .services__description {
+            font-size: 18px;
+        }
+    }
+}
