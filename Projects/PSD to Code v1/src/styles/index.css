@@ -97,6 +97,13 @@
           align-items: center;
 }
 
+@media (min-width: 800px) {
+  .footer .footer__container .footer__list {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+}
+
 .footer .footer__container .footer__list .footer__item {
   text-align: center;
   width: 50%;
@@ -108,11 +115,12 @@
   font-size: 14px;
   padding: 15px 10px;
   background-color: #344B8E;
+  text-decoration: none;
 }
 
 .footer .footer__container .footer__list .footer__item .footer__link:hover {
   background-color: rgba(58, 80, 146, 0.733);
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 .header {
