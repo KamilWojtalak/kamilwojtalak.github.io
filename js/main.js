@@ -86,10 +86,18 @@ const PsdToHTMLv1 = new Element(
     "PSD TO HTML V.1",
     "https://github.com/KamilWojtalak/I-learn/tree/master/PSD%20to%20Code%20v1"
 )
+
+const killionMunyama = new Element(
+    'Projects/Killion Munyama/index.html',
+    'screenshots/Screenshot_5.png',
+    'Killion Munyama Website Screanshot',
+    'Killion Munyama',
+    "https://github.com/KamilWojtalak/I-learn/tree/master/killions's_website"
+)
 window.onload = () => {
+    killionMunyama.create();
     ToDoApp.create();
     PsdToHTMLv1.create();
     palindromeChecker.create();
     romanConverter.create();
-    
 }

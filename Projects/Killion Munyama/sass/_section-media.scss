@@ -1,0 +1,14 @@
+.section__media {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    iframe {
+        margin: 0 auto;
+        padding: 100px 0;
+        
+        @media (min-width: $breakpoint-laptop) {
+            min-height: 80vh;
+        }
+    }
+}
