@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="sass/index.css">
 
     <script src="https://kit.fontawesome.com/f94f2c669e.js"></script>
+    <script src="lazysizes.min.js" async=""></script>
 
 </head>
 <body>
@@ -46,7 +47,7 @@ if(isset($_POST['submit'])){
             <h1 class="header__title_h1">
                 killion munyama
             </h1>
-            <img src="images/menu.png" alt="Menu Responsive" class="header__menu"> <!-- <?php echo get_template_directory_uri()?> --> 
+            <img src="images/menu.png" alt="Menu Responsive" class="header__menu lazyload"> <!-- <?php echo get_template_directory_uri()?> --> 
         </div>
 
         <nav class="header__navigation">
@@ -65,7 +66,7 @@ if(isset($_POST['submit'])){
         <section class="first-section section">
             <div class="first-section__first-part">
                 <div class="first-part__bgimage">
-                    <img class="first-part__image" src="images/FirstImage.png" alt="Kyllion"> <!-- <?php echo get_template_directory_uri()?> --> 
+                    <img class="first-part__image lazyload" src="images/FirstImage.png" alt="Kyllion"> <!-- <?php echo get_template_directory_uri()?> --> 
                         <div class="first-part__form_wrapper">
                             <h2 class="first-section__header">"Zawsze Otwarty"</h2>
                             <form action="" class="first-part__form" method="post">
@@ -80,7 +81,7 @@ if(isset($_POST['submit'])){
                 </div>
             <div class="first-section__second-part">
                 <div class="first-part__bgimage">
-                    <img class="second-part__image" src="images/FirstImage.jpg" alt="Kyllion"> <!-- <?php echo get_template_directory_uri()?> --> 
+                    <img class="second-part__image lazyload" src="images/FirstImage.jpg" alt="Kyllion"> <!-- <?php echo get_template_directory_uri()?> --> 
                         <div class="second-part__number no-select">nr<span class="second-part__5">5</span></div>
                     </div>
                 </div>
@@ -100,7 +101,7 @@ if(isset($_POST['submit'])){
                     </ul>
                 </div>
                 <div class="section__second-part section__place-for-description" id='section__second__part'>
-                    <img class="second-part__image" src="images/ThirdImage.jpg" alt="Kyllion">
+                    <img class="second-part__image lazyload" src="images/ThirdImage.jpg" alt="Kyllion">
                     <div class="description__container wrapper80"></div>
                      <!-- <?php echo get_template_directory_uri()?> --> 
                 </div>
@@ -341,7 +342,7 @@ if(isset($_POST['submit'])){
 
     
 
-    <section class="section__koalicja-obywatelska_image no-select"><img src="images/KO_logo.gif" class='maxwidth-image' alt="Logo koalicji obywatelskiej"></section> <!-- <?php echo get_template_directory_uri()?> -->
+    <section class="section__koalicja-obywatelska_image no-select"><img src="images/KO_logo.gif" class='maxwidth-image lazyload' alt="Logo koalicji obywatelskiej"></section> <!-- <?php echo get_template_directory_uri()?> -->
     <!-- Fifth Section End -->
 
     </main><!-- #main -->
