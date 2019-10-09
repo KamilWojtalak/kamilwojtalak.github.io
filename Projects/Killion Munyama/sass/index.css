@@ -405,6 +405,10 @@
   }
 }
 
+.none {
+  display: none !important;
+}
+
 @media (min-width: 1024px) {
   .section__ym__legend {
     width: 80%;
