@@ -1,0 +1,4 @@
+2019-11-07T18:16:59+00:00 CRITICAL Maximum execution time of 120 seconds exceeded in C:\xampp\htdocs\wordpress\wp-content\plugins\woocommerce\includes\libraries\action-scheduler\functions.php on line 17
+
+2019-11-07T18:18:58+00:00 CRITICAL Maximum execution time of 120 seconds exceeded in C:\xampp\htdocs\wordpress\wp-admin\includes\media.php on line 16
+
