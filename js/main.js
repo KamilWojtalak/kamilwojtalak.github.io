@@ -94,8 +94,17 @@ const killionMunyama = new Element(
     'Killion Munyama',
     "https://github.com/KamilWojtalak/I-learn/tree/master/killions's_website"
 )
+
+const feiferTrenuje = new Element(
+    'https://feifertrenuje.pl/',
+    'screenshots/Screenshot_6.png',
+    'Feifer trenuje Website Screanshoot',
+    'Feifer Trenuje - MentalRunner',
+    'https://feifertrenuje.pl/'
+)
 window.onload = () => {
     killionMunyama.create();
+    feiferTrenuje.create();
     ToDoApp.create();
     PsdToHTMLv1.create();
     palindromeChecker.create();
