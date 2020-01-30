@@ -102,12 +102,20 @@ const feiferTrenuje = new Element(
     'Feifer Trenuje - MentalRunner',
     'https://feifertrenuje.pl/'
 )
-const Exercise1 = new Element(
+const Exercise11 = new Element(
     'Projects/Exercise 1/index.html',
     'screenshots/Zadanie 1.png',
-    'Exercise 1',
-    'Exercise 1',
+    'Exercise 1.1',
+    'Exercise 1.1',
     'https://github.com/KamilWojtalak/I-learn/tree/master/weird/Exercise%201'
+)
+
+const Exercise1 = new Element(
+    'Projects/Exercise 1/index.html',
+    'screenshots/Exercise 1.png',
+    'Exercise 1',
+    'Exercise 1',
+    'https://github.com/KamilWojtalak/I-learn/tree/master/sites/Exercise%201'
 )
 window.onload = () => {
     killionMunyama.create();
@@ -116,6 +124,7 @@ window.onload = () => {
     PsdToHTMLv1.create();
     palindromeChecker.create();
     romanConverter.create();
+    Exercise11.create();
     Exercise1.create();
 }
 

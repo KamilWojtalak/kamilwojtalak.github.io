@@ -1,0 +1,28 @@
+
+.footer__second  {
+    background-color: rgb(27, 27, 27);
+
+    .container {
+        display: flex;
+        flex-flow: nowrap row;
+        justify-content: center;
+        align-items: center;
+        height: 50px;
+
+        @media (max-width: 700px) {
+            flex-flow: nowrap column;
+            padding: 30px 0;
+
+        }
+    
+        .fl_right {
+            color: white;
+            padding: 0 15px;
+            a {
+                color: rgb(255, 111, 200);
+                text-decoration: none;
+            }
+        }
+    }
+
+}

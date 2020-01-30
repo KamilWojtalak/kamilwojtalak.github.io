@@ -1,0 +1,169 @@
+.header {
+    min-height: 100vh;
+    position: relative;
+    position: relative;
+    @media (max-width: 900px) {
+    }
+    &::after{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #000;
+        opacity: .6;
+        z-index: 2;
+    }
+    .header__top,
+    .header__container {
+        position: relative;
+        z-index: 3;
+        color: white;
+        display: flex;
+
+    }
+
+    .header__top {
+        justify-content: space-between;
+        align-items: center;
+        height: 100px;
+        text-align: center;
+        @media (max-width: 1000px) {
+            flex-flow: wrap column;
+            padding-top: 5vh;
+            height: auto;
+        }
+
+        .header__title {
+            font-size: 36px;
+            cursor: pointer;
+            @media (max-width: 1000px) {
+                width: 100%;
+            }
+        }
+
+        .navigation__list {
+            display: flex;
+            list-style-type: none;
+
+            @media (max-width: 1000px) {
+                padding-top: 3vh;
+            }
+
+            @media (max-width: 700px) {
+                flex-flow: wrap column;
+                border-bottom: 1px solid #fff ;
+            }
+
+            .navigation__list__item {
+
+                    .navigation__links {
+                    display: block;
+                    padding: 10px 15px;
+                    text-decoration: none;
+                    color: white;
+                    text-transform: uppercase;
+                    font-weight: 600;
+
+                    &:hover {
+                        background-color: #76C38F;
+                        border-radius: 7px;
+                    }
+
+                    @media (max-width: 1200px) {
+                        font-size: 12px;
+                    }
+
+                    @media (max-width: 700px) {
+                        font-size: 22px;
+                    }
+                }
+            }
+        }
+    }
+
+    .header__container {
+        display: flex;
+        min-height: 80vh;
+        @media (max-width: 900px) {
+            flex-flow: wrap row;
+
+        }
+        .container-right {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .header__image {
+                 width: 380px;
+                 height: 380px;
+                 background-color: #333333;
+                 border: #6B6B6B 30px solid;
+                 border-radius: 50%;
+                 @media (max-width: 900px) {
+                    margin: 5vh 0 10vh 0;
+                }
+                @media (max-width: 600px) {
+                    width: 300px;
+                    height: 300px;
+                }
+            }
+        }
+
+        .container-left {
+            position: relative;
+            @media (max-width: 900px) {
+                display: flex;
+                flex-flow: wrap column;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+            }
+            .header__sub-title {
+                font-size: 48px;
+                position: absolute;
+                top: 20%;
+                left: 15%;
+                @media (max-width: 900px) {
+                    position: static;
+                    padding-top: 3vh;
+                    text-align: center;
+                }
+            }
+
+            .header__cta {
+                display: block;
+                position: absolute;
+                bottom: 100px;
+                left: 15%;
+                background-color: #76C38F;
+                color: white;
+                text-decoration: none;
+                padding: 13px 25px;
+                font-weight: bolder;
+                font-size: 18px;
+                border-radius: 7px;
+                transition: .5s;
+                &:hover {
+                    background-color: transparent;
+                    border: 2px solid #76c38F;
+                    transition: .5s;
+
+                }
+                @media (max-width: 900px) {
+                    position: static;
+                    margin: 3vh 0;
+                }
+            }
+        }
+
+        .container-left,
+        .container-right {
+            width: 50%;
+            @media (max-width: 900px) {
+                width: 100%;;
+            }
+        }
+    }
+}
