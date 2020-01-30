@@ -102,13 +102,6 @@ const feiferTrenuje = new Element(
     'Feifer Trenuje - MentalRunner',
     'https://feifertrenuje.pl/'
 )
-const Exercise11 = new Element(
-    'Projects/Exercise 1/index.html',
-    'screenshots/Zadanie 1.png',
-    'Exercise 1.1',
-    'Exercise 1.1',
-    'https://github.com/KamilWojtalak/I-learn/tree/master/weird/Exercise%201'
-)
 
 const Exercise1 = new Element(
     'Projects/Exercise 1/index.html',
@@ -117,6 +110,16 @@ const Exercise1 = new Element(
     'Exercise 1',
     'https://github.com/KamilWojtalak/I-learn/tree/master/sites/Exercise%201'
 )
+
+const Exercise11 = new Element(
+    'Projects/Exercise 1/index.html',
+    'screenshots/Zadanie 1.png',
+    'Exercise 1.1',
+    'Exercise 1.1',
+    'https://github.com/KamilWojtalak/I-learn/tree/master/weird/Exercise%201'
+)
+
+
 window.onload = () => {
     killionMunyama.create();
     feiferTrenuje.create();
