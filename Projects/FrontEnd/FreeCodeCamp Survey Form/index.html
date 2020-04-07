@@ -1,0 +1,109 @@
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Sandpit</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+
+    <header class="header">
+      <h1 class="header__title" id="title">freeCodeCamp Survey Form</h1>
+      <p class="header__desc" id="description">Thank you for taking the time to help us improve the platform</p>
+    </header>
+    <main class="form_container">
+      <form action="" method="post" id="survey-form">
+          <label class="form__label" for="name" id="name-label">Name:</label>
+          <input type="text" name="name" id="name" placeholder="Name" required>
+
+          <label class="form__label" for="email" id="email-label">Email:</label>
+          <input type="email" name="email" id="email" placeholder="Email" required>
+
+          <label class="form__label" for="age" id="number-label">Age
+            (optional)</label>
+          <input type="number" name="age" id="number" placeholder="Age" min="13" max="99">
+
+          <label class="form__label" for="option">Which option best describes your current role?</label>
+            <select id="dropdown" name="option" id="option" >
+              <option id="dropdown" value="select-curent-role">select curent role</option>
+              <option value="student">student</option>
+              <option value="full-time-job">full time job</option>
+              <option value="full-time-learner">full time learner</option>
+              <option value="perfer-not-to-say">perfer not to say</option>
+              <option value="other">other</option>
+            </select>
+              <div class="form__label">Would you recommend freeCodeCamp to a friend?</div>
+            <div class="radio">
+
+                <input value="definitely" type="radio" name="reccommend" id="definitely">
+                <label class="form__label__d-inline" for="definitely">definitely</label>
+                <input value="maybe" type="radio" name="reccommend" id="maybe">
+                <label class="form__label__d-inline" for="maybe">maybe</label>
+                <input value="not sure" type="radio" name="reccommend" id="not-sure">
+                <label class="form__label__d-inline" for="not-sure">not sure</label>
+
+           </div>
+
+            <div class="form__label">What is your favorite feature of freeCodeCamp?</div>
+            <select name="feature" id="feature" >
+              <option value="Select an Option">Select an Option</option>
+              <option value="Challanges">Challanges</option>
+              <option value="Projects">Projects</option>
+              <option value="Community">Community</option>
+              <option value="Open Source">Open Source</option>
+            </select>
+
+            <div class="form__label">What would you like to see improved? (Check all that apply)</div>
+            <div class="siema">
+
+            <input type="checkbox" value="value" name="Front-end Projects" id="front-endprojects"> 
+            <label class="form__label__d-inline" for="front-endprojects">Front-end Projects</label>
+            </div>
+
+            <div class="siema">
+            <input type="checkbox" value="value" name="back-end Projects" id="back-endProjects"> 
+            <label class="form__label__d-inline" for="Back-endProjects">Back-end Projects</label></div>
+
+            <div class="siema">
+            <input type="checkbox" value="value" name="Challenges" id="Challenges"> 
+            <label class="form__label__d-inline" for="Challenges">Challenges</label>
+          </div>
+            <div class="siema">
+            <input type="checkbox" value="value" name="Open Source Community" id="Open"> 
+            <label class="form__label__d-inline" for="Open">Open Source Community</label>
+          </div>
+            <div class="siema">
+            <input type="checkbox" value="value" name="Gitter help rooms" id="Gitter"> 
+            <label class="form__label__d-inline" for="Gitter">Gitter help rooms</label>
+          </div>
+            <div class="siema">
+            <input type="checkbox" value="value" name="Videos" id="videos"> 
+            <label class="form__label__d-inline" for="videos">Videos</label>
+          </div>
+            <div class="siema">
+            <input type="checkbox" value="value" name="City Meetups" id="City"> 
+            <label class="form__label__d-inline" for="City">City Meetups</label>
+          </div>
+            <div class="siema">
+            <input type="checkbox" value="value" name="Wiki" id="Wiki"> 
+            <label class="form__label__d-inline" for="Wiki">Wiki</label>
+          </div>
+            <div class="siema">
+            <input type="checkbox" value="value" name="Forum" id="Forum"> 
+            <label class="form__label__d-inline" for="Forum">Forum</label>
+          </div>
+            <div class="siema">
+            <input type="checkbox" value="value" name="Additional Courses" id="Courses"> 
+            <label class="form__label__d-inline" for="Courses">Additional Courses</label>
+          </div>
+
+            <div class="form__label">Any comments or suggestions?</div>
+            <textarea name="comments" id="comments" placeholder="Enter your content here..."></textarea>
+            <input id="submit" type="submit" value="Submit">
+      </form>
+    </main>
+
+  </body>
+</html>

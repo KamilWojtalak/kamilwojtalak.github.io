@@ -1,0 +1,25 @@
+.header__center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    text-align: center;
+    text-transform: uppercase;
+
+    .header__span {
+        font-weight: 100;
+        font-size: 18px;
+    }
+
+    .header__title {
+        font-size: 48px;
+        padding: 15px 0 40px 0;
+        transition: .5s;
+
+        &:hover {
+            color: orange;
+            transition: .5s;
+            font-size: 52px;
+        }
+    }
+}

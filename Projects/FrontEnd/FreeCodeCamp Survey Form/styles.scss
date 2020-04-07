@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body {
+    background: rgb(41, 51, 85);
+    color: white;
+}
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 20vh;
+    .header__title {
+        letter-spacing: 3px;
+    }
+    .header__desc {
+        font-size: 16px;
+    }
+}
+
+.form_container {
+    max-width: 70%;
+    margin: 25px auto;
+    padding: 50px;
+    background: rgb(28, 36, 59);
+    border-radius: 10px;
+    font-size: 22px;
+    .form__label {
+        display: block;
+        font-weight: bold;
+        padding: 16px 0;
+    }
+
+    input[type=text],
+    input[type=email],
+    input[type=number],
+    select {
+        border: none;
+        border-radius: 10px;
+        padding: 5px 15px;
+        width: 100%;
+        font-size: 22px;
+        color: black;
+        font-weight: bolder;
+    }
+
+    .radio {
+        display: flex;
+        flex-direction: column;
+            input[type=radio] {
+                width: 30px;
+                height: 30px;
+                margin: 5px 10px;
+            }
+
+    }
+    
+
+    input[type=checkbox] {
+        display: block;
+        width: 17px;
+        height: 17px;
+    }
+
+    textarea {
+        min-height: 200px;
+        width: 100%;
+        border-radius: 20px;
+        padding: 10px;
+        font-size: 20px;
+    }
+
+    input[type=submit] {
+        background: transparent;
+        border: none;
+        border: 2px solid white;
+        border-radius: 8px;
+        color: white;
+        padding: 8px 25px;
+        display: block;
+        margin: 40px auto 0;
+    }
+
+    .form__label__d-inline {
+        display: inline-block;
+        width: 80%;
+        margin-left: 10px;
+    }
+    
+    .siema {
+        display: flex;
+        align-items: center;
+    }
+
+}

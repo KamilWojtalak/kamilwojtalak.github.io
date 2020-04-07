@@ -1,0 +1,122 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: #293355;
+  color: white;
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 20vh;
+}
+
+.header .header__title {
+  letter-spacing: 3px;
+}
+
+.header .header__desc {
+  font-size: 16px;
+}
+
+.form_container {
+  max-width: 70%;
+  margin: 25px auto;
+  padding: 50px;
+  background: #1c243b;
+  border-radius: 10px;
+  font-size: 22px;
+}
+
+.form_container .form__label {
+  display: block;
+  font-weight: bold;
+  padding: 16px 0;
+}
+
+.form_container input[type=text],
+.form_container input[type=email],
+.form_container input[type=number],
+.form_container select {
+  border: none;
+  border-radius: 10px;
+  padding: 5px 15px;
+  width: 100%;
+  font-size: 22px;
+  color: black;
+  font-weight: bolder;
+}
+
+.form_container .radio {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.form_container .radio input[type=radio] {
+  width: 30px;
+  height: 30px;
+  margin: 5px 10px;
+}
+
+.form_container input[type=checkbox] {
+  display: block;
+  width: 17px;
+  height: 17px;
+}
+
+.form_container textarea {
+  min-height: 200px;
+  width: 100%;
+  border-radius: 20px;
+  padding: 10px;
+  font-size: 20px;
+}
+
+.form_container input[type=submit] {
+  background: transparent;
+  border: none;
+  border: 2px solid white;
+  border-radius: 8px;
+  color: white;
+  padding: 8px 25px;
+  display: block;
+  margin: 40px auto 0;
+}
+
+.form_container .form__label__d-inline {
+  display: inline-block;
+  width: 80%;
+  margin-left: 10px;
+}
+
+.form_container .siema {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+/*# sourceMappingURL=styles.css.map */
