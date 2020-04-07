@@ -49,7 +49,7 @@ function Project( technology, indexRoot, screenshootRoot, titleText, githubLink 
 
 const KillionMunyama = new Project(
     myBestTechnology,
-    'Projects/MyBest/Killion Munyama/index.html',
+    'https://munyama.pl/',
     'Screenshots/MyBest/killionMunyama.png',
     'Killion Munyama',
     'https://munyama.pl/',
@@ -80,9 +80,9 @@ const Rio = new Project(
 )
 const TheModernist = new Project(
     frontEndTechnology,
-    'Projects/FrontEnd/The Modetnist Page/index.html',
+    'Projects/FrontEnd/The Modernist Page/index.html',
     'Screenshots/FrontEnd/theModernist.png',
-    'The Modetnist Page',
+    'The Modernist Page',
     '',
 )
 
@@ -90,7 +90,7 @@ const TheModernist = new Project(
 
 const FormValidationv3 = new Project(
     phpTechnology,
-    'Projects/PHP/Form Validation v3/index.php',
+    '',
     'Screenshots/PHP/formValidationv3.png',
     'Form Validation v3',
     '',
