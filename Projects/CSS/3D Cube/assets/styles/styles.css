@@ -1,0 +1,164 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  height: 100vh;
+  overflow: hidden;
+  background-color: lightgray;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.container {
+  width: 300px;
+  height: 300px;
+  -webkit-perspective: 600px;
+          perspective: 600px;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+.container .cube {
+  height: 300px;
+  width: 300px;
+  position: relative;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: translateZ(-150px);
+          transform: translateZ(-150px);
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.container .cube .cube__face {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  color: white;
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 7px solid white;
+}
+
+.container .cube .cube__face--front {
+  background: rgba(255, 71, 71, 0.7);
+  -webkit-transform: rotateY(0deg) translateZ(150px);
+          transform: rotateY(0deg) translateZ(150px);
+}
+
+.container .cube .cube__face--back {
+  background: rgba(255, 204, 65, 0.7);
+  -webkit-transform: rotateY(180deg) translateZ(150px);
+          transform: rotateY(180deg) translateZ(150px);
+}
+
+.container .cube .cube__face--left {
+  background: rgba(136, 255, 68, 0.7);
+  -webkit-transform: rotateY(-90deg) translateZ(150px);
+          transform: rotateY(-90deg) translateZ(150px);
+}
+
+.container .cube .cube__face--right {
+  background: rgba(68, 255, 215, 0.7);
+  -webkit-transform: rotateY(90deg) translateZ(150px);
+          transform: rotateY(90deg) translateZ(150px);
+}
+
+.container .cube .cube__face--bottom {
+  background: rgba(124, 137, 255, 0.7);
+  -webkit-transform: rotateX(-90deg) translateZ(150px);
+          transform: rotateX(-90deg) translateZ(150px);
+}
+
+.container .cube .cube__face--top {
+  background: rgba(255, 61, 223, 0.7);
+  -webkit-transform: rotateX(90deg) translateZ(150px);
+          transform: rotateX(90deg) translateZ(150px);
+}
+
+.container .show-front {
+  -webkit-transform: translateZ(-150px) rotateX(0deg) rotateY(0);
+          transform: translateZ(-150px) rotateX(0deg) rotateY(0);
+}
+
+.container .show-back {
+  -webkit-transform: translateZ(-150px) rotateX(0deg) rotateY(180deg);
+          transform: translateZ(-150px) rotateX(0deg) rotateY(180deg);
+}
+
+.container .show-left {
+  -webkit-transform: translateZ(-150px) rotateX(0deg) rotateY(90deg);
+          transform: translateZ(-150px) rotateX(0deg) rotateY(90deg);
+}
+
+.container .show-right {
+  -webkit-transform: translateZ(-150px) rotateX(0deg) rotateY(-90deg);
+          transform: translateZ(-150px) rotateX(0deg) rotateY(-90deg);
+}
+
+.container .show-bottom {
+  -webkit-transform: translateZ(-150px) rotateX(90deg) rotateY(0deg);
+          transform: translateZ(-150px) rotateX(90deg) rotateY(0deg);
+}
+
+.container .show-top {
+  -webkit-transform: translateZ(-150px) rotateX(-90deg) rotateY(0deg);
+          transform: translateZ(-150px) rotateX(-90deg) rotateY(0deg);
+}
+
+.input-group {
+  padding-top: 50px;
+  display: block;
+  width: 100%;
+}
+
+.input-group .input-group__label {
+  padding: 0 1px 0 5px;
+}
+
+.input-group .input-group__radio {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-color: #fff;
+  color: white;
+  width: .8em;
+  height: .8em;
+  border-radius: 50%;
+}
+
+.input-group .input-group__radio:checked {
+  background-color: #79f6ff;
+}
+/*# sourceMappingURL=styles.css.map */
