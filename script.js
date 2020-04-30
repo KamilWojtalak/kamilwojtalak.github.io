@@ -15,7 +15,7 @@ function Project( technology, indexRoot, screenshootRoot, titleText, githubLink 
     this.screenshootRoot = screenshootRoot;
     this.altText = titleText;
     this.titleText = titleText;
-    this.githubLink = githubLink;
+    this.githubLink = technology;
 
     const data = {
         container: 'project-container',
@@ -131,6 +131,14 @@ const Cube3D = new Project(
     ''
 );
 
+const threeImages = new Project(
+    cssTechnology,
+    'Projects/CSS/Three Images/index.html',
+    'Screenshots/CSS/threeImages.png',
+    'Three Images Hover Effect',
+    ''
+);
+
 
 
 
@@ -161,6 +169,7 @@ window.onload = () => {
     //  CSS
 
     Cube3D.create();
+    threeImages.create();
 }
 
 
