@@ -1,0 +1,205 @@
+.header {
+    position: relative;
+    min-height: 100vh;
+    transition: 1s;
+    background-attachment: fixed;
+    background-position: top center;
+    background-size: cover;
+
+    &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: $overlay;
+        z-index: 2;
+    }
+
+    .header__content-wrapper {
+        @extend %wrapper;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        z-index: 3;
+        @media screen and (min-width: $breakpoint-header) {
+            bottom: 250px;
+            left: 12.5%;
+            transform: none;
+        }
+        .header__heading {
+            font-size: 30px;
+            color: #fff;
+            font-family: 'Muli Light';
+            font-weight: 100;
+            text-align: center;
+            @media screen and (min-width: $breakpoint-header) {
+                text-align: left;
+            }
+            .header__heading_blue {
+                padding: 5px 0;
+                color: $blue;
+            }
+        }
+
+        .btn__wrapper {
+            display: flex;
+            flex-flow: column wrap;
+            align-items: center;
+            @media screen and (min-width: $breakpoint-header) {
+                flex-flow: row nowrap;
+                align-items: center;
+            }
+            .header__btn {
+                display: inline-block;
+                margin-top: 10px;
+                padding: 10px 20px;
+                border: 2px solid #fff;
+                border-radius: 20px;
+                text-transform: uppercase;
+                font-size: 14px;
+                text-decoration: none;
+                font-weight: bold;
+                transition: .5s;
+                @media screen and (min-width: $breakpoint-header) {
+                    margin: 20px 0 30px 0;
+
+                    &:hover {
+                        transform: translateX(10px);
+                    }
+                }
+                &_white {
+                    background-color: #fff;
+                    color: $dark-blue;
+                    transition: .5s;
+                    @media screen and (min-width: $breakpoint-header) {
+                        margin-right: 10px;
+                    }
+                    @media screen and (min-width: $breakpoint-header) {
+                        &:hover {
+                            background-color: transparent;
+                            color: #fff;
+                        }
+
+                    }
+                }
+    
+                &_transparent {
+                    color: white;
+                    @media screen and (min-width: $breakpoint-header) {
+                        margin-left: 10px;
+                    }
+                    @media screen and (min-width: $breakpoint-header) {
+                        &:hover {
+                            background-color: #fff;
+                            color: $dark-blue;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .header__arrows-container {
+        display: none;
+        @media screen and (min-width: $breakpoint-header) {
+            display: flex;
+            flex-flow: row nowrap;
+        }
+
+        .left-arrow,
+        .right-arrow {
+            cursor: pointer;
+            background-image: url(../images/arrow-right-white.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            width:30px;
+            height: 20px;
+            margin: 0 5px;
+        }
+
+        .right-arrow {
+
+            @media screen and (min-width: $breakpoint-header) {
+                &:hover {
+                background-image: url(../images/arrow-left-yellow.png);
+                transform: rotate(180deg);
+                }
+            }
+        }
+
+        .left-arrow {
+            transform: rotate(180deg);
+            @media screen and (min-width: $breakpoint-header) {
+
+                &:hover {
+                    background-image: url(../images/arrow-left-yellow.png);
+                    transform: none;
+                }
+            }
+        }
+    }
+    .header__dots-wrapper {
+        display: none;
+        @media screen and (min-width: $breakpoint-header) {
+            display: block;
+            position: absolute;
+            right: 3%;
+            top: 50%;
+            transform: translateY(-50%);
+            list-style-type: none;
+        }
+        .header__dots {
+
+            @media screen and (min-width: $breakpoint-header) {
+                cursor: pointer;
+                width: 12px;
+                height: 12px;
+                margin: 15px 0;
+                border-radius: 50%;
+                background-color: #fff;
+                transition: .5s;
+                &:hover {
+                    background-color: $yellow;
+                }
+            }
+        }
+
+        .dots_active {
+            background-color: $yellow !important;
+        }
+    }
+}
+
+.header-1 {
+    background-image: url(../images/slider-1.png);
+}
+
+.header-2 {
+    // background-image: url(../images/slider-2.png);
+    background-color: red;
+}
+
+.header-3 {
+    // background-image: url(../images/slider-3.png);
+    background-color: green;
+}
+
+.header-4 {
+    // background-image: url(../images/slider-4.png);
+    background-color: blue;
+}
+
+.header-1,
+.header-2,
+.header-3,
+.header-4 {
+    transition: 1s;
+
+}
+
+@media screen and (min-width: $breakpoint-header) {
+
+}

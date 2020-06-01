@@ -1,0 +1,10 @@
+%wrapper {
+    width: 85%;
+    margin: 0 auto;
+}
+
+%position-center {
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}

@@ -1,0 +1,22 @@
+//      MAIN SCSS FILE
+
+@import 'partials/variables';
+@import 'partials/fonts';
+@import 'partials/global';
+@import 'partials/extends';
+
+//      NAV
+
+@import 'partials/nav';
+
+//      HEADER
+
+@import 'partials/header';
+
+//      SECTIONS
+
+@import 'partials/main';
+
+//      FOOTER
+
+@import 'partials/footer';
