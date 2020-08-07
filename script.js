@@ -15,7 +15,12 @@ function Project( technology, indexRoot, screenshootRoot, titleText, githubLink 
     this.screenshootRoot = screenshootRoot;
     this.altText = titleText;
     this.titleText = titleText;
-    this.githubLink = technology;
+
+    if (githubLink) {
+        this.githubLink = indexRoot;
+    } else {
+        this.githubLink = githubLink;
+    }
 
     const data = {
         container: 'project-container',
@@ -51,38 +56,45 @@ function Project( technology, indexRoot, screenshootRoot, titleText, githubLink 
 const KillionMunyama = new Project(
     myBestTechnology,
     'https://munyama.pl/',
-    'Screenshots/MyBest/killionMunyama.png',
+    'screenshots/my-best/killion-munyama.png',
     'Killion Munyama',
     'https://munyama.pl/',
 )
 
 //  FrontEnd
 
+const Rekrutacyjny = new Project(
+    frontEndTechnology,
+    'projects/frontend/projekt-testowy/index.html',
+    'screenshots/frontend/projekt-testowy.png',
+    'Projekt Rekrutacyjny',
+    'projects/frontend/projekt-testowy/index.html',
+)
 const Cuda = new Project(
     frontEndTechnology,
-    'Projects/FrontEnd/Cuda Page/index.html',
-    'Screenshots/FrontEnd/cuda.png',
+    'projects/frontend/cuda-page/index.html',
+    'screenshots/frontend/cuda.png',
     'Cuda Page',
-    '',
+    'projects/frontend/cuda-page/index.html',
 )
 const FreeCodeCampSurveyForm = new Project(
     frontEndTechnology,
-    'Projects/FrontEnd/FreeCodeCamp Survey Form/index.html',
-    'Screenshots/FrontEnd/freeCodeCampSurveyForm.png',
+    'projects/frontend/free-code-camp-survey-form/index.html',
+    'screenshots/frontend/free-code-camp-survey-form.png',
     'FreeCodeCamp Survey Form',
     '',
 )
 const Rio = new Project(
     frontEndTechnology,
-    'Projects/FrontEnd/Rio Page/index.html',
-    'Screenshots/FrontEnd/rio.png',
+    'projects/frontend/rio-page/index.html',
+    'screenshots/frontend/rio.png',
     'Rio Page',
     '',
 )
 const TheModernist = new Project(
     frontEndTechnology,
-    'Projects/FrontEnd/The Modernist Page/index.html',
-    'Screenshots/FrontEnd/theModernist.png',
+    'projects/frontend/the-modernist-page/index.html',
+    'screenshots/frontend/the-modernist.png',
     'The Modernist Page',
     '',
 )
@@ -91,32 +103,32 @@ const TheModernist = new Project(
 
 const FormValidationv3 = new Project(
     phpTechnology,
-    '',
-    'Screenshots/PHP/formValidationv3.png',
+    'https://github.com/KamilWojtalak/kamilwojtalak.github.io/tree/master/Projects/PHP/Form%20Validation%20v3',
+    'screenshots/php/form-validation-v3.png',
     'Form Validation v3',
-    '',
+    'https://github.com/KamilWojtalak/kamilwojtalak.github.io/tree/master/Projects/PHP/Form%20Validation%20v3',
 )
 
 //  JavaScript
 
 const BottleOfWaterSimulator = new Project(
     javaScriptTechnology,
-    'Projects/JavaScript/Bottle Of Water Simulator/index.html',
-    'Screenshots/JavaScript/bottleOfWaterSimulator.png',
+    'projects/javascript/bottle-of-water-simulator/index.html',
+    'screenshots/javascript/bottle-of-water-simulator.png',
     'Bottle Of Water Simulator',
     '',
 )
 const BottleUsingClasses = new Project(
     javaScriptTechnology,
-    'Projects/JavaScript/Simulator Using Classes/index.html',
-    'Screenshots/JavaScript/bottleUsingClasses.png',
+    'projects/javascript/simulator-using-classes/index.html',
+    'screenshots/javascript/bottle-using-classes.png',
     'Simulator Using Classes',
     '',
 )
 const ToDoApp = new Project(
     javaScriptTechnology,
-    'Projects/JavaScript/To Do App/index.html',
-    'Screenshots/JavaScript/toDoApp.png',
+    'projects/javascript/to-do-app/index.html',
+    'screenshots/javascript/to-do-app.png',
     'To Do App',
     '',
 )
@@ -125,16 +137,16 @@ const ToDoApp = new Project(
 
 const Cube3D = new Project(
     cssTechnology,
-    'Projects/CSS/3D Cube/index.html',
-    'Screenshots/CSS/3dCube.png',
+    'projects/css/3d-cube/index.html',
+    'screenshots/css/3d-cube.png',
     '3D Cube',
     ''
 );
 
 const threeImages = new Project(
     cssTechnology,
-    'Projects/CSS/Three Images/index.html',
-    'Screenshots/CSS/threeImages.png',
+    'projects/css/three-images/index.html',
+    'screenshots/css/three-images.png',
     'Three Images Hover Effect',
     ''
 );
@@ -151,6 +163,7 @@ window.onload = () => {
 
     //  FrontEnd
 
+    Rekrutacyjny.create();
     Cuda.create();
     FreeCodeCampSurveyForm.create();
     Rio.create();
