@@ -70,6 +70,20 @@ const Rekrutacyjny = new Project(
     'Projekt Rekrutacyjny',
     'projects/frontend/projekt-testowy/index.html',
 )
+const insure = new Project(
+    frontEndTechnology,
+    'projects/frontend/insure/index.html',
+    'screenshots/frontend/insure.png',
+    'Insure Page',
+    'projects/frontend/insure/index.html',
+)
+const socialMediaDashboard = new Project(
+    frontEndTechnology,
+    'projects/frontend/social-media-dashboard/index.html',
+    'screenshots/frontend/social-media-dashboard.png',
+    'Social Media Dashboard',
+    'projects/frontend/social-media-dashboard/index.html',
+)
 const Cuda = new Project(
     frontEndTechnology,
     'projects/frontend/cuda-page/index.html',
@@ -135,6 +149,38 @@ const ToDoApp = new Project(
 
 //  CSS
 
+const cssShapes = new Project(
+    cssTechnology,
+    'projects/css/css-shapes/index.html',
+    'screenshots/css/css-shapes.png',
+    'CSS Shapes',
+    ''
+);
+
+const dogWalkersApp = new Project(
+    cssTechnology,
+    'projects/css/dog-walkers-app/index.html',
+    'screenshots/css/dog-walkers-app.png',
+    'Dog Walkers App',
+    ''
+);
+
+const fylo = new Project(
+    cssTechnology,
+    'projects/css/fylo/index.html',
+    'screenshots/css/fylo.png',
+    'Fylo Card',
+    ''
+);
+
+const singleCard = new Project(
+    cssTechnology,
+    'projects/css/single-card/index.html',
+    'screenshots/css/single-card.png',
+    'Single Card',
+    ''
+);
+
 const Cube3D = new Project(
     cssTechnology,
     'projects/css/3d-cube/index.html',
@@ -163,6 +209,8 @@ window.onload = () => {
 
     //  FrontEnd
 
+    insure.create();
+    socialMediaDashboard.create();
     Rekrutacyjny.create();
     Cuda.create();
     FreeCodeCampSurveyForm.create();
@@ -181,6 +229,10 @@ window.onload = () => {
 
     //  CSS
 
+    cssShapes.create();
+    dogWalkersApp.create();
+    fylo.create();
+    singleCard.create();
     Cube3D.create();
     threeImages.create();
 }

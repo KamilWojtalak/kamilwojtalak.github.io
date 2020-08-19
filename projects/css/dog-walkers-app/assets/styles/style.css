@@ -1,0 +1,429 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'Rubik';
+  src: url(./fonts/Rubik-Regular.ttf);
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Rubik Light';
+  src: url(./fonts/Rubik-Light.ttf);
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'Rubik Bold';
+  src: url(./fonts/Rubik-Bold.ttf);
+  font-weight: 700;
+}
+
+body {
+  font-family: 'Rubik', sans-serif;
+  font-size: 16px;
+}
+
+.section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+}
+
+@media screen and (min-width: 800px) {
+  .section {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    height: calc(100vh - 13px);
+  }
+}
+
+.section .phone__container {
+  min-height: 120vh;
+}
+
+@media screen and (min-width: 800px) {
+  .section .phone__container {
+    min-height: initial;
+    -webkit-box-flex: 50%;
+        -ms-flex: 50%;
+            flex: 50%;
+  }
+}
+
+.section .phone__container .purple-box {
+  position: relative;
+  width: 100vw;
+  height: 60vh;
+  background-color: #8838ff;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.section .phone__container .purple-box::before {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  width: 100%;
+  height: 250px;
+  background-color: #8838ff;
+  -webkit-transform: translateY(-50%) translateX(-50%);
+          transform: translateY(-50%) translateX(-50%);
+  border-radius: 50% / 35%;
+}
+
+@media screen and (min-width: 800px) {
+  .section .phone__container .purple-box {
+    width: 300px;
+    -webkit-transform: initial;
+            transform: initial;
+  }
+}
+
+.section .phone__container .purple-box .phone {
+  position: relative;
+  width: 230px;
+  top: 10%;
+  left: 100%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  border: 15px solid #fff;
+  border-radius: 20px;
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+}
+
+.section .phone__container .purple-box .phone::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-color: #fff;
+}
+
+@media screen and (min-width: 400px) {
+  .section .phone__container .purple-box .phone {
+    width: 300px;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .section .phone__container .purple-box .phone {
+    top: 50%;
+    -webkit-transform: translateX(-25%) translateY(-30%);
+            transform: translateX(-25%) translateY(-30%);
+  }
+}
+
+.section .phone__container .purple-box .phone .phone__notch {
+  position: absolute;
+  top: -1px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 70%;
+  height: 25px;
+  background-color: #fff;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  z-index: 2;
+}
+
+.section .phone__container .purple-box .phone .phone__header {
+  position: relative;
+  width: 100%;
+  height: 70px;
+  background: -webkit-gradient(linear, left top, right top, from(#8838ff), to(#e942ff));
+  background: linear-gradient(to right, #8838ff 0%, #e942ff 100%);
+  border-radius: 20px 20px 5px 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 5px 7px 5px;
+}
+
+.section .phone__container .purple-box .phone .phone__header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  z-index: -1;
+  border-radius: 0 0 5px 5px;
+}
+
+.section .phone__container .purple-box .phone .phone__header .phone__arrow {
+  width: 15px;
+  height: 12px;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+}
+
+.section .phone__container .purple-box .phone .phone__header .phone__arrow_left {
+  background-image: url(./../images/left.svg);
+}
+
+.section .phone__container .purple-box .phone .phone__header .phone__info-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.section .phone__container .purple-box .phone .phone__header .phone__prof-img {
+  width: 29px;
+  height: 29px;
+  border-radius: 50%;
+  border: 1px solid #d89eff;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(./../images/avatar.jpg);
+  margin-right: 10px;
+}
+
+.section .phone__container .purple-box .phone .phone__header .phone__prof-info .prof-info__name {
+  font-size: 16px;
+  color: #fff;
+}
+
+.section .phone__container .purple-box .phone .phone__header .phone__prof-info .prof-info__status {
+  font-size: 10px;
+  color: #d89eff;
+}
+
+.section .phone__container .purple-box .phone .phone__header .phone__arrow_right {
+  background-image: url(./../images/right.svg);
+}
+
+.section .phone__container .purple-box .phone .phone__messages-area_container {
+  background-color: #f5f3f7;
+  padding: 15px;
+  border-radius: 0 0 20px 20px;
+}
+
+.section .phone__container .purple-box .phone .phone__messages-area_container .phone__messages-area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+}
+
+.section .phone__container .purple-box .phone .phone__messages-area_container .phone__messages-area .message__photos-container {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.section .phone__container .purple-box .phone .phone__messages-area_container .phone__messages-area .message__photos-container .message__photo {
+  width: 50px;
+  height: 50px;
+  border-radius: 15px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 2.5px 3px;
+}
+
+.section .phone__container .purple-box .phone .phone__messages-area_container .phone__messages-area .message__photos-container .message__photo_1 {
+  background-image: url(./../images/dog-image-1.jpg);
+}
+
+.section .phone__container .purple-box .phone .phone__messages-area_container .phone__messages-area .message__photos-container .message__photo_2 {
+  background-image: url(./../images/dog-image-2.jpg);
+}
+
+.section .phone__container .purple-box .phone .phone__messages-area_container .phone__messages-area .message__photos-container .message__photo_3 {
+  background-image: url(./../images/dog-image-3.jpg);
+}
+
+.section .phone__container .purple-box .phone .phone__messages-area_container .phone__messages-area .phone__mesage {
+  font-size: 10px;
+  padding: 7px;
+  margin: 5px 0;
+  display: inline-block;
+  max-width: 70%;
+}
+
+.section .phone__container .purple-box .phone .phone__messages-area_container .phone__messages-area .phone__mesage_right {
+  border-radius: 10px 10px 2px 10px;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  background-color: #fff;
+  color: #6e5d7e;
+}
+
+.section .phone__container .purple-box .phone .phone__messages-area_container .phone__messages-area .phone__mesage_left {
+  border-radius: 10px 10px 10px 2px;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  background-color: rgba(223, 183, 250, 0.521);
+  color: #9241c8;
+}
+
+.section .phone__container .purple-box .phone .phone__messages-area_container .phone__messages-area .phone__mesage_left-special {
+  border-radius: 10px 10px 10px 2px;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  background: -webkit-gradient(linear, left top, right top, from(#8838ff), to(#e942ff));
+  background: linear-gradient(to right, #8838ff 0%, #e942ff 100%);
+  width: 85%;
+  color: #d89eff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.section .phone__container .purple-box .phone .phone__messages-area_container .phone__messages-area .phone__mesage_left-special .special__circle {
+  border: 1px solid #d89eff;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+}
+
+.section .phone__container .purple-box .phone .phone__messages-area_container .phone__messages-area .phone__mesage_left-special .special__time {
+  text-align: center;
+}
+
+.section .phone__container .purple-box .phone .phone__messages-area_container .phone__messages-area .phone__mesage_left-special .special__dolars {
+  font-size: 14px;
+  color: #fff;
+}
+
+.section .phone__container .purple-box .phone .phone__messages-area_container .phone__type-area {
+  position: relative;
+  width: 100%;
+  min-height: 40px;
+  margin-top: 15px;
+  border-radius: 20px;
+  background-color: red;
+}
+
+.section .phone__container .purple-box .phone .phone__messages-area_container .phone__type-area .phone__input {
+  width: 100%;
+  height: 40px;
+  border: none;
+  border-radius: 20px;
+  padding: 0 15px;
+}
+
+.section .phone__container .purple-box .phone .phone__messages-area_container .phone__type-area .phone__input:focus, .section .phone__container .purple-box .phone .phone__messages-area_container .phone__type-area .phone__input:active {
+  border-radius: 20px;
+}
+
+.section .phone__container .purple-box .phone .phone__messages-area_container .phone__type-area .phone__submit {
+  position: absolute;
+  right: 0px;
+  top: 50%;
+  -webkit-transform: translateY(-50%) translateX(-50%);
+          transform: translateY(-50%) translateX(-50%);
+  width: 28px;
+  height: 28px;
+  background-color: #3e2753;
+  border-radius: 50%;
+  color: white;
+}
+
+.section .description__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (min-width: 800px) {
+  .section .description__container {
+    -webkit-box-flex: 50%;
+        -ms-flex: 50%;
+            flex: 50%;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+.section .description__container .description__title {
+  color: #3e2753;
+  font-size: 32px;
+}
+
+.section .description__container .description__text {
+  width: 90%;
+  margin: 0 auto;
+  padding: 30px 20px;
+  color: #a39daa;
+  text-align: center;
+  font-size: 16px;
+}
+
+@media screen and (min-width: 800px) {
+  .section .description__container .description__text {
+    width: 400px;
+    text-align: initial;
+    margin: initial;
+    padding: 30px 0;
+  }
+}
+/*# sourceMappingURL=style.css.map */

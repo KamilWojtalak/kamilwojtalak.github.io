@@ -1,0 +1,63 @@
+.section__find {
+    position: relative;
+    background-color: $dark-violet;
+    
+    .section__find-container {
+        width: 85%;
+        margin: 0px auto;
+        padding: 75px 0;
+        text-align: center;
+        @media screen and (min-width: $breakpoint-medium) {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-between;
+            align-items: center;
+        
+        }
+        .find__title {
+            color: #fff;
+            font-size: 2.2rem;
+        }
+        .find__cta {
+            position: relative;
+            z-index: 2;
+            display: inline-block;
+            color: #fff;
+            text-decoration: none;
+            text-transform: uppercase;
+            margin-top: 50px;
+            padding: 7px 15px;
+            border: 2px solid #fff;
+            transition: .5s;
+
+            @media screen and (min-width: $breakpoint-medium) {
+                margin: initial;
+            
+            }
+            &:hover {
+                color: $dark-violet;
+                border: 2px solid #fff;
+                background-color: #fff;
+                text-decoration: underline;
+            }
+        }  
+    }  
+
+    &:before {
+        content: '';
+        position: absolute;
+        right: 0;
+        top: 0;
+        min-width: 50%;
+        height: 100%;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: top right;
+        background-image: url("../images/bg-pattern-how-we-work-mobile.svg");
+
+        @media screen and (min-width: $breakpoint-medium) {
+            background-image: url("../images/bg-pattern-how-we-work-desktop.svg");
+        
+        }
+    }
+}

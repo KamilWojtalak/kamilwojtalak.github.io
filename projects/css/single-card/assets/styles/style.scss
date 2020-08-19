@@ -1,0 +1,242 @@
+$Very-Dark-Grayish-Blue: hsl(217, 19%, 35%);
+$Desaturated-Dark-Blue: hsl(214, 17%, 51%);
+$Grayish-Blue: hsl(212, 23%, 69%);
+$Light-rayish-Blue: hsl(210, 44%, 96%);
+$breakpoint: 750px;
+
+@media screen and (min-width: $breakpoint) {
+        
+}
+
+*,
+*::after, 
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 13px;
+    height: 100vh;
+    min-height: 100vh;
+    background-color: $Light-rayish-Blue;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 500;
+}
+
+
+
+.box {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+
+    width: 80%;
+    max-width: 340px;
+
+    background-color: #fff;
+
+    box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.3);
+
+    border-radius: 20px;
+
+    @media screen and (min-width: $breakpoint) {
+        max-width: 600px;
+        display: flex;
+    }
+    .image {
+        width: 100%;
+        height: 200px;
+
+        background-image: url(./../images/drawers.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        border-radius: 20px 20px 0 0;
+        @media screen and (min-width: $breakpoint) {
+            width: 35%;
+            height: 260px;
+            border-radius: 20px 0 0 20px;
+
+        }
+    }
+     
+    .content-container {
+        padding: 34px 30px 20px 30px;
+        @media screen and (max-width: 360px) {
+            padding: 10px;
+
+        }
+        @media screen and (min-width: $breakpoint) {
+            max-width: 65%;
+
+        }
+
+
+        .content__title {
+            color: $Very-Dark-Grayish-Blue;
+            font-weight: bold;
+            font-size: 16px;
+            line-height: 24px;
+
+            padding-bottom: 10px;
+        }
+
+        .content__paragraph {
+            color: $Desaturated-Dark-Blue;
+            font-size: 14px;
+            line-height: 20px;
+
+            padding-bottom: 20px;
+
+        }
+
+        .content__info {
+            overflow: hidden;
+
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-between;
+
+            height: 40px;
+            .info__data {
+                display: flex;
+                align-items: center;
+                height: 100%;
+                .data__image {
+                    width: 40px;
+                    height: 40px;
+
+                    border-radius: 50%;
+
+                    background-image: url("./../images/avatar-michelle.jpg");
+                    background-size: cover;
+                }
+
+                .data__name-date {
+                    padding-left: 20px;
+                    display: flex;
+                    flex-flow: column wrap;
+                    justify-content: center;
+                    
+                    height: 100%;
+                    .data__name {
+                        font-weight: bold;
+                        color: $Desaturated-Dark-Blue;
+                    }
+
+                    .data__date {
+                        font-weight: 100;
+                        color: $Desaturated-Dark-Blue;
+                    }
+                }
+            }
+            .info__share {
+                    width: 40px;
+                    height: 40px;
+
+                    background-color: rgb(197, 208, 219);
+                    border-radius: 50%;
+
+                    background-image: url("./../images/icon-share.svg");
+                    background-repeat: no-repeat;
+                    background-position: center;
+
+                    position: relative;
+                    cursor: pointer;
+
+            }
+        }
+
+        .share_hover {
+            display: none;
+            
+
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 70px;
+            @media screen and (min-width: $breakpoint) {
+                width: 300px;
+                left: initial;
+                right: 50px;
+                bottom: 70px;
+
+                transform: translateX(50%);
+            }
+            .share_hover-container {
+                width: 100%;
+                height: 70px;
+                padding: 30px;
+    
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                flex-flow: row nowrap;
+    
+                background-color: $Very-Dark-Grayish-Blue;
+
+                @media screen and (min-width: $breakpoint) {
+                    border-radius: 20px;
+                    overflow: hidden;
+                }
+                .share__socials {
+                    display: flex;
+                    align-items: center;
+                    .share__share {
+                        color: $Grayish-Blue;
+                        letter-spacing: 7px;
+                    }
+                    .share__fb,
+                    .share__tw,
+                    .share__pt {
+                        border-radius: 50%;
+    
+                        width: 30px;
+                        height: 30px;
+    
+                        background-repeat: no-repeat;
+                        background-position: center;
+                    }
+    
+                    .share__fb {
+                        background-image: url("./../images/icon-facebook.svg");
+                    }
+                    .share__tw {
+                        background-image: url("./../images/icon-twitter.svg");
+    
+                    }
+                    .share__pt {
+                        background-image: url("./../images/icon-pinterest.svg");
+    
+                    }
+                }
+                .share__icon {
+                    width: 35px;
+                    height: 35px;
+    
+                    background-color: #fff;
+                    background-image: url("./../images/icon-share.svg");
+                    background-repeat: no-repeat;
+                    background-position: center;
+    
+                    border-radius: 50%;
+
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+    
+

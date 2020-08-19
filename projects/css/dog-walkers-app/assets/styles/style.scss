@@ -1,0 +1,409 @@
+
+$Pale-Violet: hsl(276, 100%, 81%); //  (sub-heading at the top of the app UI)
+$Moderate-Violet: hsl(276, 55%, 52%); // (chat on the left)
+$Desaturated-Dark-Violet: hsl(271, 15%, 43%); // (chat on the right)
+$Grayish-Blue: hsl(206, 6%, 79%); // (placeholder text)
+$Very-Dark-Desaturated-Violet: hsl(271, 36%, 24%); // (main heading)
+$Dark-Grayish-Violet: hsl(270, 7%, 64%); // (paragraph)
+
+// #### Gradients
+$Light-Magenta: #e942ff;
+$Light-Violet: #8838ff;
+
+$Light-Grayish-Violet: hsl(270, 20%, 96%); //  (app background)
+$Very-Dark-Desaturated-Violet: hsl(271, 36%, 24%); //  (submit button background)
+$Very-Light-Magenta: hsl(289, 100%, 72%); //  (radio button outline)
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Rubik';
+    src: url(./fonts/Rubik-Regular.ttf);
+    font-weight: 500;
+}
+@font-face {
+    font-family: 'Rubik Light';
+    src: url(./fonts/Rubik-Light.ttf);
+    font-weight: 300;
+}
+@font-face {
+    font-family: 'Rubik Bold';
+    src: url(./fonts/Rubik-Bold.ttf);
+    font-weight: 700;
+}
+
+body {
+    font-family: 'Rubik', sans-serif;
+    font-size: 16px;
+}
+
+$breakpoint-medium: 800px;
+
+@media screen and (min-width: $breakpoint-medium) {
+
+}
+
+.section {
+    display: flex;
+    flex-flow: column wrap;
+    @media screen and (min-width: $breakpoint-medium) {
+        flex-flow: row nowrap;
+        justify-content: space-between;   
+        height: calc(100vh - 13px);
+    }
+    .phone__container {
+        min-height: 120vh;
+        @media screen and (min-width: $breakpoint-medium) {
+            min-height: initial;
+            flex: 50%;      
+        }
+        .purple-box {
+            position: relative;
+
+            width: 100vw;
+            height: 60vh;
+
+            background-color: $Light-Violet;
+
+            transform: translateX(-50%);
+
+            &::before {
+                content: '';
+
+                position: absolute;
+                top: 100%;
+                left: 50%;
+
+                width: 100%;
+                height: 250px;
+
+                background-color: $Light-Violet;
+
+                transform: translateY(-50%) translateX(-50%);
+
+                border-radius: 50% / 35%;
+            }
+
+            @media screen and (min-width: $breakpoint-medium) {
+                width: 300px;
+                transform: initial;
+                
+            }
+            .phone { 
+                position: relative;
+
+                width: 230px;
+
+                top: 10%;
+                left: 100%;
+
+                transform: translateX(-50%);
+
+                border: 15px solid #fff;
+                border-radius: 20px;
+
+                box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.3);
+
+                display: flex;
+                flex-flow: column wrap;
+
+                &::before {
+                    content: '';
+
+                    position: absolute;
+
+                    bottom: 0;
+                    left: 0;
+
+                    width: 100%;
+                    height: 100%;
+                    z-index: -1;
+                    background-color: #fff;
+                }
+
+                @media screen and (min-width: 400px) {
+                    width: 300px;
+                }
+                @media screen and (min-width: $breakpoint-medium) {
+                    top: 50%;
+                    transform: translateX(-25%) translateY(-30%);
+                } 
+
+                .phone__notch {
+                    position: absolute;
+
+                    top: -1px;
+                    left: 50%;
+
+                    transform: translateX(-50%);
+
+                    width: 70%;
+                    height: 25px;
+
+                    background-color: #fff;
+
+                    border-bottom-left-radius: 20px;
+                    border-bottom-right-radius: 20px;
+
+                    z-index: 2;
+                }
+                .phone__header {
+                    position: relative;
+                    width: 100%;
+                    height: 70px;
+
+                    background: linear-gradient(to right, rgba(136,56,255,1) 0%, rgba(233,66,255,1) 100%);
+
+                    border-radius: 20px 20px 5px 5px;
+
+                    display: flex;
+                    flex-flow: row nowrap;
+                    align-items: flex-end;
+                    justify-content: space-between;
+
+                    padding: 0 5px 7px 5px;
+                    &::before {
+                        content: '';
+
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+
+                        width: 100%;
+                        height: 100%;
+
+                        background-color: #fff;
+
+                        z-index: -1;
+
+                        border-radius: 0 0 5px 5px;
+                    }
+
+                    .phone__arrow  {
+                        width: 15px;
+                        height: 12px;
+
+                        background-size: contain;
+                        background-position: center;
+                        background-repeat: no-repeat;
+
+                        transform: translateY(-100%);
+                    }
+                    .phone__arrow_left {
+                        background-image: url(./../images/left.svg);
+                    }
+
+                    .phone__info-container {
+                        display: flex;
+                    }
+                    .phone__prof-img {
+                        width: 29px;
+                        height: 29px;
+
+                        border-radius: 50%;
+                        border: 1px solid #d89eff;
+
+                        background-size: cover;
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        background-image: url(./../images/avatar.jpg);
+
+                        margin-right: 10px;
+                    }
+                    .phone__prof-info {
+                        
+                        .prof-info__name {
+                            font-size: 16px;
+                            color: #fff;
+                        }
+                        .prof-info__status {
+                            font-size: 10px;
+                            color: #d89eff;
+                
+                        }
+                    }
+                    .phone__arrow_right {
+                        background-image: url(./../images/right.svg);
+                
+                    }
+                }
+
+                .phone__messages-area_container {
+                    background-color: hsl(270, 20%, 96%);
+                    padding: 15px;
+                    border-radius: 0 0 20px 20px;
+                    .phone__messages-area {
+                        display: flex;
+                        flex-flow: column wrap;
+                        .message__photos-container {
+                            align-self: flex-end;
+                            display: flex;
+                            .message__photo  {
+                                width: 50px;
+                                height: 50px;
+
+                                border-radius: 15px;
+
+                                background-position: center;
+                                background-repeat: no-repeat;
+                                background-size: cover;
+
+                                margin: 2.5px 3px;
+
+
+                            }
+                            .message__photo_1 {
+                                background-image: url(./../images/dog-image-1.jpg);
+                            }
+                            .message__photo_2 {
+                                background-image: url(./../images/dog-image-2.jpg);
+                                
+                            }
+                            .message__photo_3 {
+                                background-image: url(./../images/dog-image-3.jpg);
+                
+                            }
+                        }
+                        .phone__mesage {
+                            font-size: 10px;
+
+                            padding: 7px;
+                            margin: 5px 0;
+
+                            display: inline-block;
+
+                            max-width: 70%;
+
+
+                        }
+                        .phone__mesage_right {
+                            border-radius: 10px 10px 2px 10px;
+                            align-self: flex-end;
+                            background-color: #fff;
+                            color: $Desaturated-Dark-Violet;
+                        }
+                        .phone__mesage_left {
+                            border-radius: 10px 10px 10px 2px;
+                            align-self: flex-start;
+
+                            background-color: hsla(276, 87%, 85%, 0.521);;
+                            color: $Moderate-Violet;
+                        }
+                        .phone__mesage_left-special {
+                            border-radius: 10px 10px 10px 2px;
+                            align-self: flex-start;
+
+                            background: linear-gradient(to right, rgba(136,56,255,1) 0%, rgba(233,66,255,1) 100%);
+
+                            width: 85%;
+
+                            color: $Pale-Violet;
+
+                            display: flex;
+                            flex-flow: row nowrap;
+                            align-items: center;
+                            justify-content: space-between;
+                            .special__circle {
+                                border: 1px solid $Pale-Violet;
+
+                                width: 15px;
+                                height: 15px;
+
+                                border-radius: 50%;
+                            }
+                            .special__time {
+                                text-align: center;
+                                
+                            }
+                            .special__dolars {
+                                font-size: 14px;
+                                color: #fff;
+                            }
+                        }
+                    }
+                    .phone__type-area {
+                        position: relative;
+
+                        width: 100%;
+                        min-height: 40px;
+
+                        margin-top: 15px;
+
+                        border-radius: 20px;
+                        background-color: red;
+
+                        .phone__input {
+                            width: 100%;
+                            height: 40px;
+                            border: none;
+                            border-radius: 20px;
+
+                            padding: 0 15px;
+
+                            &:focus,
+                            &:active {
+                                border-radius: 20px;
+                            }
+                        }
+
+                        .phone__submit {
+                            position: absolute;
+
+                            right: 0px;
+                            top:50%;
+
+                            transform: translateY(-50%) translateX(-50%);
+
+                            width: 28px;
+                            height: 28px;
+
+                            background-color: $Very-Dark-Desaturated-Violet;
+
+                            border-radius: 50%;
+                            color: white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .description__container {
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+        @media screen and (min-width: $breakpoint-medium) {
+            flex: 50%;
+            align-items: flex-start;
+            justify-content: center;
+        }
+        .description__title {
+            color: $Very-Dark-Desaturated-Violet;
+            font-size: 32px;
+        }
+        .description__text {
+            width: 90%;
+
+            margin: 0 auto;
+            padding: 30px 20px;
+
+            color: $Dark-Grayish-Violet;
+
+            text-align: center;
+            font-size: 16px;
+
+
+            @media screen and (min-width: $breakpoint-medium) {
+                width: 400px;
+                text-align: initial;
+                margin: initial;
+                padding: 30px 0;
+
+            }
+        }
+    }
+}

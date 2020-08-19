@@ -1,0 +1,51 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+$breakpoint-nav: 800px;
+
+$breakpoint-small: 400px;
+$breakpoint-medium: 900px;
+$breakpoint-large: 1050px;
+
+$dark-violet: hsl(256, 26%, 20%);
+$grayish-blue: hsl(216, 30%, 68%);
+$very-dark-violet: hsl(270, 9%, 17%);
+$dark-grayish-violet: hsl(273, 4%, 51%);
+$very-light-gray: hsl(0, 0%, 98%);
+
+
+@font-face {
+    font-family: "DMSerif";
+    src: url("/styles/fonts/DMSerifDisplay-Regular.ttf");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Karla-Regular";
+    src: url('fonts/Karla-Regular.ttf');
+}
+body {
+    font-size: 16px;
+    font-family: "Karla-Regular";
+    background-color: #f8f8f8;
+}
+
+h1, 
+h2,
+h3,
+h4,
+h5 {
+    font-family: DMSerif;
+}
+
+.section-wrapper {
+    width: 95%;
+    margin: 0 auto;
+
+    @media screen and (min-width: $breakpoint-medium) {
+        width: 80%;
+    }
+}

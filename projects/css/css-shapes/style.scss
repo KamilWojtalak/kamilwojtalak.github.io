@@ -1,0 +1,231 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+$orange: #fe8802;
+$dark: #100e17;
+body {
+    background-color: $dark;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 200px);
+    justify-content: center;
+    grid-auto-rows: 200px;
+    gap: 30px;
+    min-height: 100vh;
+    .box {
+        position: relative;
+        background-color: $orange;
+
+        .dark {
+            background-color: $dark;
+
+        }
+        .center {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translateX(-50%) translateY(-50%);
+        }
+
+        .e {
+            width: 80%;
+            height: 80%;
+
+        }
+        .circle {
+            
+
+            border-radius: 50%;
+
+        }
+
+        .elipse {
+            width: 80%;
+            height: 60%;
+            background-color: $dark;
+            border-radius: 50%;
+        }
+        .message_left {
+            border-radius: 30% 30% 30% 2px;
+        }
+        .message_right {
+            border-radius: 30% 30% 2px 30%;
+        }
+
+        .triangle_left {
+            width: 0;
+            height: 0;
+            border: 80px solid transparent;
+            border-left: 80px solid $dark;
+        }
+
+        .triangle_top {
+            width: 0;
+            height: 0;
+            border: 80px solid transparent;
+            border-top: 80px solid $dark;
+        }
+
+        .triangle_right {
+            width: 0;
+            height: 0;
+            border: 80px solid transparent;
+            border-right: 80px solid $dark;
+        }
+
+        .triangle_bottom {
+            width: 0;
+            height: 0;
+            border: 80px solid transparent;
+            border-bottom: 80px solid $dark;
+        }
+        .pacman {
+            width: 0;
+            height: 0;
+            border: 80px solid $dark;
+            border-right: 80px solid transparent;
+            border-radius: 50%;
+
+            position: relative;
+            left: 50%;
+            top: 50%;
+            transform: translateY(-50%) translateX(-50%);
+
+            &::after {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 30px;
+                height: 30px;
+                transform: translateX(-125%) translateY(-175%);
+                background-color: $orange;
+                border-radius: 50%;
+            }
+        }
+
+        .pop-up {
+            width: 80%;
+            height: 20%;
+            border-radius: 20px;
+            left: 50%;
+            top: 50%;
+            position: relative;
+
+            transform: translateY(-50%) translateX(-50%);
+            
+
+            &::after {
+                content: '';
+                width: 0;
+                height: 0;
+                position: absolute;
+                top: 0;
+                left: 50%;
+                border: 10px solid transparent;
+                border-bottom: 10px solid $dark;
+
+                transform: translateX(-50%) translateY(-100%);
+            }
+        }
+        .trapezium {
+
+            border-bottom: 100px solid $dark;
+            border-left: 30px solid transparent;
+            border-right: 30px solid transparent;
+            width: 80%;
+        }
+
+        .trapezium_reverse {
+
+                border-top: 100px solid $dark;
+                border-right: 30px solid transparent;
+                border-left: 30px solid transparent;
+                width: 80%;
+        }
+
+        .something {
+            position: relative;
+            top: 50%;
+            left: 50%;
+            transform: translateX(-50%) translateY(-50%) rotate(45deg);
+
+            width: 50%;
+            height: 50%;
+
+            background-color: $dark;
+
+            &::after {
+                content: '';
+                top: 0;
+                left: 0;
+                position: absolute;
+                transform:rotateZ(90deg) ;
+
+                width: 100%;
+                height: 50%;
+
+                background-color: $orange;
+            }
+        }
+        .diamond {
+            position: relative;
+            top: 50%;
+            left: 50%;
+            transform: translateX(-50%) translateY(-50%) rotate(45deg);
+
+            width: 50%;
+            height: 50%;
+
+            background-color: $dark;
+
+            &::after {
+                content: '';
+                top: 0;
+                left: 0;
+                position: absolute;
+                transform: translateY(-100%) rotate(-45deg) translateX(-50%);
+
+                width: 100%;
+                height: 50%;
+
+                background-color: $orange;
+            }
+        }
+
+        .something_2 {
+            position: relative;
+            top: 50%;
+            left: 50%;
+            transform: translateX(-50%) translateY(-50%) rotate(45deg);
+            overflow: hidden;
+            width: 50%;
+            height: 50%;
+
+            border-radius: 50% 50% 0 50%;
+
+            background-color: $dark;
+
+            &::after {
+                content: '';
+                top: 0;
+                left: 0;
+                position: absolute;
+                transform: translateX(-50%);
+
+                width: 100%;
+                height: 50%;
+
+                border-radius: 0 0 50px 0;
+
+                background-color: $orange;
+            }
+        }
+    }
+} 
