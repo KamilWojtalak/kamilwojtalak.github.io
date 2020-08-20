@@ -1,0 +1,15 @@
+{
+    "version": 3,
+    "mappings": "ACAA,OAAO,CAAC,yFAAI;AAYZ,AAAA,CAAC;AACD,CAAC,AAAA,OAAO;AACR,CAAC,AAAA,QAAQ,CAAC;EACN,MAAM,EAAE,CAAC;EACT,OAAO,EAAE,CAAC;EACV,UAAU,EAAE,UAAU;CACzB;;AAED,AAAA,IAAI,CAAC;EACD,SAAS,EAAE,IAAI;EACf,WAAW,EAAE,aAAa;CAC7B",
+    "sources": [
+        "style.scss",
+        "parts/_global.scss",
+        "parts/_nav.scss",
+        "parts/_header.scss",
+        "parts/_why.scss",
+        "parts/_articles.scss",
+        "parts/_footer.scss"
+    ],
+    "names": [],
+    "file": "style.css"
+}

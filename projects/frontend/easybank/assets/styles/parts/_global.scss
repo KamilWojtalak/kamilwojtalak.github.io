@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap');
+
+// ## Colors
+// ### Primary
+$Dark-Blue: #2d314d;
+$Lime-Green: #31d35c;
+$Bright-Cyan: #2bb7da;
+// ### Neutral
+$Grayish-Blue: #9698a6;
+$Light-Grayish-Blue: #f3f4f6;
+$Very-Light-Gray: #fafafa;
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 18px;
+    font-family: 'Public Sans';
+}
+
+.cta {
+    
+}
