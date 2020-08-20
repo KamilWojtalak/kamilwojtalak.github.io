@@ -1,0 +1,215 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,500;1,700&display=swap");
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: 'Raleway';
+  font-size: 14px;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  background-color: #0c122c;
+  position: relative;
+}
+
+.container .waves-bg {
+  height: 100%;
+  width: 100%;
+  background-image: url("./../images/bg-mobile.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@media screen and (min-width: 700px) {
+  .container .waves-bg {
+    background-image: url("./../images/bg-desktop.png");
+    height: 50%;
+    position: absolute;
+    bottom: 0;
+  }
+}
+
+.container .fylo__container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
+}
+
+@media screen and (min-width: 700px) {
+  .container .fylo__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.container .fylo__container .fylo,
+.container .fylo__container .storage__usage {
+  width: 80vw;
+  max-width: 310px;
+  background-color: #1d2c67;
+  margin: 20px auto;
+}
+
+.container .fylo__container .fylo {
+  border-radius: 5% 40% 5% 5%;
+  padding: 30px 25px;
+}
+
+.container .fylo__container .fylo .fylo__heading {
+  width: 100%;
+  height: 50px;
+}
+
+.container .fylo__container .fylo .fylo__heading .fylo__logo-contianer {
+  width: 140px;
+  height: 100%;
+  background-image: url("./../images/logo.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.container .fylo__container .fylo .fylo__icons-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .fylo__container .fylo .fylo__icons-container .fylo__icon {
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-color: #0c122c;
+  background-position: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+  margin: 15px 10px 0 0;
+}
+
+.container .fylo__container .fylo .fylo__icons-container .fylon__icon_file {
+  background-image: url("./../images/icon-document.svg");
+}
+
+.container .fylo__container .fylo .fylo__icons-container .fylon__icon_document {
+  background-image: url("./../images/icon-folder.svg");
+}
+
+.container .fylo__container .fylo .fylo__icons-container .fylon__icon_upload {
+  background-image: url("./../images/icon-upload.svg");
+}
+
+.container .fylo__container .storage__usage {
+  height: 150px;
+  position: relative;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+@media screen and (min-width: 700px) {
+  .container .fylo__container .storage__usage {
+    margin: 0 0 -20px 20px;
+  }
+}
+
+.container .fylo__container .storage__usage .storage__container .storage__text {
+  color: #fff;
+  text-align: center;
+  font-size: 14px;
+}
+
+.container .fylo__container .storage__usage .storage__container .storage__bar {
+  margin: 15px auto;
+  width: 100%;
+  height: 15px;
+  background-color: rgba(12, 18, 44, 0.7);
+  border-radius: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .fylo__container .storage__usage .storage__container .storage__bar .storage__bar_used {
+  height: 11px;
+  width: 75%;
+  margin: 0 0 0 2px;
+  border-radius: 20px;
+  background: -webkit-gradient(linear, left top, right top, from(#ffa399), to(#ff4d97));
+  background: linear-gradient(to right, #ffa399 0%, #ff4d97 100%);
+  position: relative;
+}
+
+.container .fylo__container .storage__usage .storage__container .storage__bar .storage__bar_used::after {
+  content: '';
+  position: absolute;
+  width: 9px;
+  height: 9px;
+  background-color: #fff;
+  top: 1px;
+  right: 2px;
+  border-radius: 50%;
+}
+
+.container .fylo__container .storage__usage .storage__container .storage__capacity {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: #dddbff;
+  font-size: 12px;
+}
+
+.container .fylo__container .storage__usage .storage__container .storage__absolute-element {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transform: translateX(-50%) translateY(40%);
+          transform: translateX(-50%) translateY(40%);
+  width: 165px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 20px;
+  color: #848794;
+  font-weight: bold;
+}
+
+.container .fylo__container .storage__usage .storage__container .storage__absolute-element span {
+  color: #0c122c;
+  font-size: 2em;
+  padding-right: 10px;
+}
+
+.bold {
+  font-weight: bold;
+  font-size: 1.3em;
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,500;1,700&display=swap');
+$Gradient: #ffa399 to #ff4d97;
+
+
+$Pale-Blue: hsl(243, 100%, 93%);
+$Grayish-Blue: hsl(229, 7%, 55%);
+$Dark-Blue: hsl(228, 56%, 26%);
+$Very-Dark-Blue: hsl(229, 57%, 11%);
+
+$breakpoint: 700px;
+
+@media screen and (min-width: $breakpoint) {
+
+}
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Raleway';
+    font-size: 14px;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+
+    background-color: $Very-Dark-Blue;
+
+    position: relative;
+    .waves-bg {
+        height: 100%;
+        width: 100%;
+
+        background-image: url("./../images/bg-mobile.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        @media screen and (min-width: $breakpoint) {
+            background-image: url("./../images/bg-desktop.png");
+
+            height: 50%;
+            position: absolute;
+            bottom: 0;
+        }
+    }
+
+    .fylo__container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+
+        transform: translateX(-50%) translateY(-50%);
+
+        @media screen and (min-width: $breakpoint) {
+            display: flex;
+            align-items: center;
+        }
+        .fylo,
+        .storage__usage {
+            width: 80vw;
+            max-width: 310px;
+
+            background-color: $Dark-Blue;
+
+            margin: 20px auto;
+        }
+        
+
+        .fylo {
+
+            border-radius: 5% 40% 5% 5%;
+
+            padding: 30px 25px;
+            .fylo__heading {
+                width: 100%;
+                height: 50px;
+                .fylo__logo-contianer {
+                    width: 140px;
+                    height: 100%;
+                    background-image: url("./../images/logo.svg");
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                }
+            }
+
+            .fylo__icons-container {
+                display: flex;
+                align-items: center;
+                .fylo__icon {
+                    background-repeat: no-repeat;
+                    background-size: auto;
+                    background-color: $Very-Dark-Blue;
+                    background-position:  center;
+
+                    width: 40px;
+                    height: 40px;
+
+                    border-radius: 5px;
+
+                    margin: 15px 10px 0 0;
+                } 
+
+                .fylon__icon_file {
+                    background-image: url("./../images/icon-document.svg");
+                }
+
+                .fylon__icon_document {
+                    background-image: url("./../images/icon-folder.svg");
+
+                }
+                .fylon__icon_upload {
+                    background-image: url("./../images/icon-upload.svg");
+
+                }
+            }
+        }
+
+        .storage__usage {
+            height: 150px;
+
+            position: relative;
+
+            border-radius: 10px ;
+
+            padding: 20px;
+
+            @media screen and (min-width: $breakpoint) {
+                margin: 0 0 -20px 20px;
+            }
+
+            .storage__container {
+
+                .storage__text {
+                    color: #fff;
+                    text-align: center;
+                    font-size: 14px;
+                }
+
+                .storage__bar {
+                    margin: 15px auto;
+
+                    width: 100%;
+                    height: 15px;
+
+                    background-color: hsla(229, 57%, 11%, 0.7);
+
+                    border-radius: 20px;
+                    
+                    display: flex;
+                    align-items: center;
+                    .storage__bar_used {
+                        height: 11px;
+                        width: 75%;
+
+                        margin: 0 0 0 2px;
+
+                        border-radius: 20px;
+
+                        background: linear-gradient(to right, rgba(255,163,153,1) 0%, rgba(255,77,151,1) 100%);
+
+                        position: relative;
+
+                        &::after {
+                            content: '';
+
+                            position: absolute;
+
+                            width: 9px;
+                            height: 9px;
+
+                            background-color: #fff;
+
+                            top: 1px;
+                            right: 2px;
+
+                            border-radius: 50%;
+                        }
+                    }
+                }
+
+                .storage__capacity {
+                    display: flex;
+                    justify-content: space-between;
+
+                    color: $Pale-Blue;
+                    font-size: 12px;
+                    .storage__capacity_lowest {
+
+                    }
+
+                    .storage__capacity_highest {
+
+                    }
+                }
+
+                .storage__absolute-element {
+                    position: absolute;
+                    bottom: 0;
+                    left: 50%;
+
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    transform: translateX(-50%) translateY(40%); 
+
+                    width: 165px;
+                    padding: 20px;
+
+                    background-color: #fff;
+                    
+                    border-radius: 20px;
+
+                    color: $Grayish-Blue;
+                    font-weight: bold;
+                    span {
+                        color: $Very-Dark-Blue;
+                        font-size: 2em;
+                        padding-right: 10px;
+                    }
+                }
+            }
+        }
+    }
+}
+.bold {
+    font-weight: bold;
+    font-size: 1.3em;
+}
