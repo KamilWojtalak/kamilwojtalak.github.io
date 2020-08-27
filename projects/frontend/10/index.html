@@ -2,65 +2,168 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="./assets/styles/style.css">
   <title>Frontend Mentor | Huddle landing page with curved sections</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
 </head>
 <body>
-  Try it free
+  <nav class="nav">
+    <div class="nav-container">
+      <div class="nav__logo"></div>
+      <a href="#" class="nav__cta">Try It Free</a>
+    </div>
+  </nav>
 
-  Build The Community Your Fans Will Love
+  <header class="header">
+    <div class="header-container">
+      <h1 class="header__title">
+        Build The Community Your Fans Will Love
+      </h1>
+      <p class="header__description">
+        Huddle re-imagines the way we build communities. You have a voice, but so does 
+        your audience. Create connections with your users as you engage in genuine discussion. 
+      </p>
+      <a href="#" class="header__cta">Get Started For Free</a>
+      <div class="header__image">
 
-  Huddle re-imagines the way we build communities. You have a voice, but so does 
-  your audience. Create connections with your users as you engage in genuine discussion. 
+      </div>
+    </div>
+  </header>
 
-  Get Started For Free
-
-  1.4k+
-  Communities Formed
-
-  2.7m+
-  Messages Sent
-
-  Grow Together
-  Generate meaningful discussions with your audience and build a strong, loyal community. 
-  Think of the insightful conversations you miss out on with a feedback form. 
-
-  Flowing Conversations
-  You wouldn't paginate a conversation in real life, so why do it online? Our threads have 
-  just-in-time loading for a more natural flow.
-
-  Your Users
-  It takes no time at all to integrate Huddle with your app's authentication solution. This means, 
-  once signed in to your app, your users can start chatting immediately.
-
-  Ready To Build Your Community?
-  Get Started For Free
-
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris nulla quam, hendrerit lacinia 
-  vestibulum a, ultrices quis sem.
+  <section class="profits">
+    <div class="profits-container">
+      <div class="item">
+        <div class="item__icon item__icon_communities"></div>
+        <div class="item__number">
+          1.4k+
+        </div>
+        <p class="item__description">
+          Communities Formed
+        </p>
+      </div>
+      <div class="item">
+        <div class="item__icon item__icon_messages"></div>
+        <div class="item__number">
+          2.7m+
+        </div>
+        <p class="item__description">
+          Messages Sent
+        </p>
+      </div>
+    </div>
+  </section>
   
-  Phone: +1-543-123-4567
-  example@huddle.com
+  <section class="about">
+    <div class="about-container">
+      <div class="about__item">
+        <img src="./assets/images/illustration-grow-together.svg" alt="Grow Together Image" class="about__image">
+      </div>
+      <div class="about__item">
+        <h2 class="about__title">
+          Grow Together
+        </h2>
+        <div class="about__description">
+          Generate meaningful discussions with your audience and build a strong, loyal community. 
+          Think of the insightful conversations you miss out on with a feedback form.
+        </div>
+      </div>
+      <div class="about__item">
+        <img src="./assets/images/illustration-flowing-conversation.svg" alt="Flowing Conversation Image" class="about__image">
+      </div>
+      <div class="about__item">
+        <h2 class="about__title">
+          Flowing Conversations
+        </h2>
+        <div class="about__description">
+          You wouldn't paginate a conversation in real life, so why do it online? Our threads have 
+          just-in-time loading for a more natural flow.
+        </div>
+      </div>
+      <div class="about__item">
+        <img src="./assets/images/illustration-your-users.svg" alt="Users Image" class="about__image">
+      </div>
+      <div class="about__item">
+        <h2 class="about__title">
+          Your Users
+        </h2>
+        <div class="about__description">
+          It takes no time at all to integrate Huddle with your app's authentication solution. This means, 
+          once signed in to your app, your users can start chatting immediately.
+        </div>
+      </div>
+    </div>
+  </section>
 
-  Newsletter
-  To recieve tips on how to grow your community, sign up to our weekly newsletter. We’ll never 
-  send you spam or pass on your email address
+  <section class="build">
+    <div class="build-container">
+      <h2 class="build__title">
+        Ready To Build Your Community?
+      </h2>
+      <a href="3" class="build__cta">
+        Get Started For Free
+      </a>
+    </div>
+  </section>
 
-  Subscribe
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="info">
+          <div class="info__logo-conatainer">
+            <img src="./assets/images/logo-footer.svg" alt="logo image" class="info__message">
+          </div>     
+          <p class="info__description">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris nulla quam, hendrerit lacinia 
+            vestibulum a, ultrices quis sem.
+          </p>
+          <div class="info__phone-contianer">
+            <img src="./assets/images/icon-phone.svg" alt="Phone Image" class="phone__image">
+            <p class="phone__text">
+              Phone: +1-543-123-4567
+            </p>
+          </div>
+          <div class="info__email-contianer">
+            <img src="./assets/images/icon-email.svg" alt="Email Image" class="email__image">
+            <p class="email__text">
+              example@huddle.com
+            </p>
+          </div>
+      </div>
+      <div class="newsletter">
+        <h2 class="newsletter__title">
+          Newsletter
+        </h2>
+        <p class="newsletter__description">
+          To recieve tips on how to grow your community, sign up to our weekly newsletter. We’ll never 
+          send you spam or pass on your email address
+        </p>
+        <form action="" class="newsletter__form">
+          <input type="email" name="email" id="email" class="form__email">
+          <input type="submit" value="Subscribe" class="form__submit">
+        </form>
+      </div>
+      <div class="socials-container">
+        <a href="#">
+        <img src="./assets/images/fb.svg" alt="Facebook Image" class="socials">
+        </a>
+        <a href="#">
+          <img src="./assets/images/ig.svg" alt="Instagram Image" class="socials">
+        </a>
+        <a href="#">
+          <img src="./assets/images/tt.svg" alt="Twitter Image" class="socials">
+        </a>
+      </div>
+    </div>
+  </footer>
 
   <footer>
     <p class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
+      Coded by <a href="#">Kamil Wojtalak</a>.
     </p>
   </footer>
 </body>
