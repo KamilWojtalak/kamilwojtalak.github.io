@@ -77,6 +77,13 @@ const insure = new Project(
     'Insure Page',
     'projects/frontend/insure/index.html',
 )
+const huddle = new Project(
+    frontEndTechnology,
+    'projects/frontend/huddle/index.html',
+    'screenshots/frontend/huddle.png',
+    'Huddle Page',
+    'projects/frontend/huddle/index.html',
+)
 const socialMediaDashboard = new Project(
     frontEndTechnology,
     'projects/frontend/social-media-dashboard/index.html',
@@ -209,9 +216,10 @@ window.onload = () => {
 
     //  FrontEnd
 
-    insure.create();
-    socialMediaDashboard.create();
     Rekrutacyjny.create();
+    insure.create();
+    huddle.create();
+    socialMediaDashboard.create();
     Cuda.create();
     FreeCodeCampSurveyForm.create();
     Rio.create();
