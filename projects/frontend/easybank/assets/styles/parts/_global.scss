@@ -5,10 +5,16 @@
 $Dark-Blue: #2d314d;
 $Lime-Green: #31d35c;
 $Bright-Cyan: #2bb7da;
+$gradient: linear-gradient(to right, rgba(49,211,92,1) 0%, rgba(43,183,218,1) 100%);
+$gradient_hover: linear-gradient(to right, rgba(49, 211, 92, 0.7) 0%, rgba(43,183,218,0.7) 100%);
 // ### Neutral
 $Grayish-Blue: #9698a6;
 $Light-Grayish-Blue: #f3f4f6;
 $Very-Light-Gray: #fafafa;
+
+$breakpoint-small: 375px;
+$breakpoint-medium: 900px;
+
 
 *,
 *::after,
@@ -21,8 +27,45 @@ $Very-Light-Gray: #fafafa;
 body {
     font-size: 18px;
     font-family: 'Public Sans';
+
 }
 
+
 .cta {
+    display: block;
+    max-width: 220px;
+
+    padding: 13px 30px;
+
+    color: $Very-Light-Gray;
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+
+    background: $gradient;
+
+    border: none;
+    border-radius: 20px;
+    border: 2px solid #fff;
+
+    transition: 1s;
+
     
+    &:hover {
+        background: $gradient_hover;
+
+    }
+}
+
+%bg {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+@media screen and (min-width: $breakpoint-small) {
+
+}
+@media screen and (min-width: $breakpoint-medium) {
+
 }

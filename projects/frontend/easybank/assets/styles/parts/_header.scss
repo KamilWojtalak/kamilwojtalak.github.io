@@ -1,30 +1,82 @@
 .header {
+    @media screen and (min-width: $breakpoint-medium) {
+        display: flex;
+        flex-flow: row nowrap;
+        height: calc(100vh - 150px);
+        overflow: hidden;
+    }
     .header__image-container {
+        background-image: url("./../images/bg-intro-mobile.svg");
+        background-repeat: no-repeat;
+        background-size: cover;
 
+        height: 50vh;
+        width: 100%;
+
+        overflow: hidden;
+
+        @media screen and (min-width: $breakpoint-small) {
+            background-image: url("./../images/bg-intro-desktop.svg");
+            background-position: top center;
+            background-size: contain;
+        }
+        @media screen and (min-width: $breakpoint-medium) {
+            order: 2;
+            height: calc(100vh - 100px);
+            transform: translateX(15%) translateY(-10%);
+        }
         .header__image {
-    
+            background-image: url("./../images/image-mockups.png");
+            background-size: contain;
+            background-position: top center;
+            background-repeat: no-repeat;
+
+            transform: translateY(-30%);
+
+            width: 100%;
+            height: 100%;
+
+            @media screen and (min-width: $breakpoint-small) {
+                transform: initial;
+            }
         }
     }
 
     .header__text-container {
-
-        .header__title {
-    
-        }
-    }
-
-    .header__description {
-    
-    }
-
-    .header__cta  {
-
-        .cta {
+        width: 80%;
+        margin: 0 auto;
+        text-align: center;
         
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+        @media screen and (min-width: $breakpoint-small) {
+            padding-top: 50px;
         }
+        @media screen and (min-width: $breakpoint-medium) {
+            width: 110%;
+            margin: 0 auto 0 7.5vw;
+            height: calc(100vh - 200px);
+            justify-content: center;
+        }
+        .header__title {
+            font-weight: 100;
+            color: $Dark-Blue;
+            font-size: 26px;
 
+            padding-bottom: 20px;
+        }
+        .header__description {
+            color: $Grayish-Blue;
+            font-size: 16px;
+        }
+        .header__cta  {
+            margin: 20px 0;
+        }
+        .cta {
+            
+        }
     }
-    
 }
 
 

@@ -1,35 +1,78 @@
 .why {
+    margin: 100px 0;
     .why__container {
+        width: 90%;
+        margin: 0 auto;
+        text-align: center;
         .why__heading-container {
+        @media screen and (min-width: $breakpoint-medium) {
+            text-align: left;
+            width: 50%;
+        }
             .why__title {
-  
+                font-weight: 100;
+                color: $Dark-Blue;
+                padding-bottom: 20px;
             }
             .why__description {
-  
+                color: $Grayish-Blue;
+                font-size: 13px;
+
+                padding-bottom: 20px;
             }
         }
         .why__items-container {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-around;
+
+            margin: 50px 0 0 0;
+
             .item__container {
+                display: flex;
+                flex-flow: column wrap;
+                align-items: center;
+                flex: 250px;
+
                 .item__image {
-  
+                    width: 55px;
+                    height: 55px;
+
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    background-position: center;
+
+                    margin: 0 0 20px 0;
                 }
                 .item__image_online {
-  
+                    background-image: url("./../images/icon-online.svg");
                 }
                 .item__image_simple {
+                    background-image: url("./../images/icon-budgeting.svg");
                   
                 }
                 .item__image_fast {
+                    background-image: url("./../images/icon-onboarding.svg");
                   
                 }
                 .item__image_api {
+                    background-image: url("./../images/icon-api.svg");
                   
                 }
                 .item__title {
-  
+                    font-size: 16px;
+                    font-weight: 400;
+                    color: $Dark-Blue;
+
+                    padding-bottom: 20px;
                 }
                 .item__description {
-  
+                    display: block;
+
+                    color: $Grayish-Blue;
+                    font-size: 13px;
+
+                    padding-bottom: 20px;
                 }
             }
         }
