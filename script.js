@@ -77,6 +77,13 @@ const insure = new Project(
     'Insure Page',
     'projects/frontend/insure/index.html',
 )
+const easybank = new Project(
+    frontEndTechnology,
+    'projects/frontend/easybank/index.html',
+    'screenshots/frontend/easybank.png',
+    'Easybank Page',
+    'projects/frontend/easybank/index.html',
+)
 const huddle = new Project(
     frontEndTechnology,
     'projects/frontend/huddle/index.html',
