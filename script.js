@@ -139,6 +139,13 @@ const FormValidationv3 = new Project(
 
 //  JavaScript
 
+const Balls = new Project(
+    javaScriptTechnology,
+    'projects/javascript/balls/index.html',
+    'screenshots/javascript/balls.png',
+    'MDN JavaScript Assesment #1',
+    '',
+)
 const BottleOfWaterSimulator = new Project(
     javaScriptTechnology,
     'projects/javascript/bottle-of-water-simulator/index.html',
@@ -237,7 +244,7 @@ window.onload = () => {
     FormValidationv3.create();
     
     // JavaScript
-
+    Balls.create();
     ToDoApp.create();
     BottleOfWaterSimulator.create();
     BottleUsingClasses.create();
