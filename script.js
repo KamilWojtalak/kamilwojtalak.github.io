@@ -139,6 +139,13 @@ const FormValidationv3 = new Project(
 
 //  JavaScript
 
+const Api = new Project(
+    javaScriptTechnology,
+    'projects/javascript/api/index.html',
+    'screenshots/javascript/api.png',
+    'Working with Third Party API',
+    '',
+)
 const Balls = new Project(
     javaScriptTechnology,
     'projects/javascript/balls/index.html',

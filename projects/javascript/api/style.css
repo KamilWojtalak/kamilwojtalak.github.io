@@ -1,0 +1,68 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000;
+    color: rgb(219, 219, 219);
+}
+
+.container  {
+    width: 80%;
+    margin: 100px auto;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 300px);
+    justify-content: center;
+    gap: 50px;
+    align-items: center;
+}
+
+
+.person__name,
+.person__id,
+.person__species,
+.person__films,
+.person__url,
+.person__age,
+.person__gender {
+    padding: 7px 0;
+}
+
+.person {
+    background-color: rgb(14, 14, 14);
+
+    padding: 15px 30px 30px 30px;
+    
+    overflow: hidden;
+
+    text-align: center;
+}
+
+.person__name {
+    font-size: 42px;
+    padding-bottom: 20px;
+    font-weight: bold;
+}
+
+.person__id {
+    font-size: 12px;
+}
+
+.person__species,
+.person__films,
+.person__url {
+    font-size: 12px;
+}
+
+.person__age {
+    font-size: 20px;
+}
+
+.person__gender {
+    font-size: 32px;
+    font-weight: bold;
+}
+
