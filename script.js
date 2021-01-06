@@ -251,6 +251,7 @@ window.onload = () => {
     FormValidationv3.create();
     
     // JavaScript
+    Api.create();
     Balls.create();
     ToDoApp.create();
     BottleOfWaterSimulator.create();
