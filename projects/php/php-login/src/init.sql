@@ -1,0 +1,10 @@
+CREATE DATABASE php_login DEFAULT COLLATE utf8mb4_polish_ci;
+
+CREATE TABLE users (
+    id SERIAL,
+    email VARCHAR(50) NOT NULL UNIQUE,
+    username VARCHAR(50) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL,
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+    PRIMARY KEY (id)
+);
