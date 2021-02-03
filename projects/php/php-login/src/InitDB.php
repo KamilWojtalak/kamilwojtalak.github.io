@@ -4,15 +4,15 @@ require_once 'ConnectDB.php';
 
 class InitDB extends ConnectDB {
 
-    public function __construct( $host, $dbname, $user, $password ) {
-        parent::__construct( $host, $dbname, $user, $password );
+    public function __construct( $host, $db_name, $user, $password ) {
+        parent::__construct( $host, $db_name, $user, $password );
         
     }
 
-    public function createDatabase( $dbname ) {
-        $this->dbname = $dbname;
-        $this->sql = "CREATE DATABASE IF NOT EXISTS $this->dbname DEFAULT COLLATE utf8mb4_polish_ci;";
-        // $this->sql = "DROP DATABASE $this->dbname;";
+    public function create_database( $db_name ) {
+        $this->db_name = $db_name;
+        $this->sql = "CREATE DATABASE IF NOT EXISTS $this->db_name DEFAULT COLLATE utf8mb4_polish_ci;";
+        // $this->sql = "DROP DATABASE $this->db_name;";
         
 
         try {
@@ -22,7 +22,7 @@ class InitDB extends ConnectDB {
         }
     }
 
-    public function createTable() {
+    public function create_table() {
         $this->sql = "CREATE TABLE IF NOT EXISTS users (
             id SERIAL,
             email VARCHAR(50) NOT NULL UNIQUE,
@@ -35,7 +35,7 @@ class InitDB extends ConnectDB {
         try {
             $this->db->exec( $this->sql );
         } catch ( PDOException $e ) {
-            die( "I can't create a table $e->getMessage()");
+            die( "I can't create a table " . $e->getMessage());
         }
     }
 }

@@ -14,31 +14,31 @@ if ( !isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true ) {
 if ( $_SERVER['REQUEST_METHOD'] == 'POST' ) {
     $id = htmlspecialchars( $_SESSION['id'] );
 
-    $opassword = trim($_POST['opassword']);
-    $npassword = trim($_POST['npassword']);
-    $rpassword = trim($_POST['rpassword']);
+    $o_password = trim($_POST['opassword']);
+    $n_password = trim($_POST['npassword']);
+    $r_password = trim($_POST['rpassword']);
 
-    $opasswordErr = $npasswordErr = $rpasswordErr = $info = '';
+    $o_password_err = $n_password_err = $r_password_err = $info = '';
 
     $valid = new Validation();
 
-    $valid->emptyV( $opassword, $opasswordErr );
-    $valid->emptyV( $npassword, $npasswordErr );
-    $valid->emptyV( $rpassword, $rpasswordErr );
+    $valid->empty_v( $o_password, $o_password_err );
+    $valid->empty_v( $n_password, $n_password_err );
+    $valid->empty_v( $r_password, $r_password_err );
 
-    $valid->passwordV( $opassword, $opasswordErr );
-    $valid->passwordV( $npassword, $npasswordErr );
-    $valid->rpasswordV( $rpassword, $npassword, $rpasswordErr);
+    $valid->password_v( $o_password, $o_password_err );
+    $valid->password_v( $n_password, $n_password_err );
+    $valid->r_password_v( $r_password, $n_password, $r_password_err);
 
-    if ( empty($opasswordErr) && empty($npasswordErr) && empty($rpasswordErr) ) {
-        $userManagement = new UserManagement( DB_HOST, DB_NAME, DB_USERNAME, DB_PASSWORD );
-        $userManagement->connect();
+    if ( empty($o_password_err) && empty($n_password_err) && empty($r_password_err) ) {
+        $user_management = new UserManagement( DB_HOST, DB_NAME, DB_USERNAME, DB_PASSWORD );
+        $user_management->connect();
 
-        $userManagement->checkIfCorrectPassword( $id, $opassword, $opasswordErr );
+        $user_management->check_if_correct_password( $id, $o_password, $o_password_err );
 
-        if ( empty($opasswordErr) ) {
-            $npassword = password_hash( $npassword, PASSWORD_DEFAULT );
-            $userManagement->updatePassword( $id, $npassword, $info);
+        if ( empty($o_password_err) ) {
+            $n_password = password_hash( $n_password, PASSWORD_DEFAULT );
+            $user_management->update_password( $id, $n_password, $info);
         }
     }
 }
@@ -62,20 +62,20 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST' ) {
             <label for="opassword">Old password</label><br>
             <input type="password" name="opassword" id="opassword">
             <div class="">
-                <?php echo ($opasswordErr) ?? '';?>
+                <?php echo ($o_password_err) ?? '';?>
             </div>
         </div>
         <div class="">
             <label for="npassword">New password</label><br>
             <input type="password" name="npassword" id="npassword">
             <div class="">
-                <?php echo ($npasswordErr) ?? '';?>
+                <?php echo ($n_password_err) ?? '';?>
 
             </div>
             <label for="rpassword">Repeat new password</label><br>
             <input type="password" name="rpassword" id="rpassword">
             <div class="">
-                <?php echo ($rpasswordErr) ?? '';?>
+                <?php echo ($r_password_err) ?? '';?>
 
             </div>
             <div class="">

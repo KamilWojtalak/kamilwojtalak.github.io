@@ -14,19 +14,19 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST' ) {
 
     $email = trim($_POST['email']);
     $password = trim($_POST['password']);
-    $emailErr = $passwordErr = $generalErr = '';
+    $email__err = $password__err = $general__err = '';
 
-    $valid->emptyV( $email, $emailErr );
-    $valid->emptyV( $password, $passwordErr );
+    $valid->empty_v( $email, $email__err );
+    $valid->empty_v( $password, $password__err );
 
-    $valid->emailV( $email, $emailErr );
-    $valid->passwordV( $password, $passwordErr );
+    $valid->email_v( $email, $email__err );
+    $valid->password_v( $password, $password__err );
 
-    if ( empty( $emailErr ) && empty( $passwordErr ) ) {
-        $userMangement = new UserManagement(  DB_HOST, DB_NAME, DB_USERNAME, DB_PASSWORD );
+    if ( empty( $email__err ) && empty( $password__err ) ) {
+        $user_mangement = new UserManagement(  DB_HOST, DB_NAME, DB_USERNAME, DB_PASSWORD );
 
-        $userMangement->connect(  );
-        $userMangement->login( $email, $password, $generalErr );
+        $user_mangement->connect(  );
+        $user_mangement->login( $email, $password, $general__err );
     }
     unset( $valid );
 }
@@ -47,14 +47,14 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST' ) {
             <label for="email">Email:</label>
             <input type="email" name="email" id="email">
             <div class="">
-                <?php echo ( $emailErr ) ?? ''; ?>
+                <?php echo ( $email_err ) ?? ''; ?>
             </div>
         </div>
         <div class="">
             <label for="password">Password:</label>
             <input type="password" name="password" id="password">
             <div class="">
-                <?php echo ( $passwordErr ) ?? ''; ?>
+                <?php echo ( $password_err ) ?? ''; ?>
             </div>
         </div>
         <div class="">

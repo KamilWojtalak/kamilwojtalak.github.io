@@ -2,13 +2,13 @@
 
 class ConnectDB {
     protected $host;
-    protected $dbname;
+    protected $db_name;
     protected $user;
     protected $password;
 
-    public function __construct ( string $host, string $dbname, string $user, string $password )  {
+    public function __construct ( string $host, string $db_name, string $user, string $password )  {
         $this->host = $host;
-        $this->dbname = $dbname;
+        $this->db_name = $db_name;
         $this->user = $user;
         $this->password = $password;
 
@@ -17,7 +17,7 @@ class ConnectDB {
 
     public function connect(  ) {
         try {
-            $this->db = new PDO( "mysql:host=$this->host;dbname=$this->dbname", $this->user, $this->password );
+            $this->db = new PDO( "mysql:host=$this->host;dbname=$this->db_name", $this->user, $this->password );
 
             $this->db->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 

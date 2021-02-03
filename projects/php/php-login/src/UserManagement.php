@@ -4,12 +4,12 @@ require_once 'ConnectDB.php';
 
 class UserManagement extends ConnectDB {
 
-    public function __construct( string $host, string $dbname, string $user, string $password) {
-        parent::__construct( $host, $dbname, $user, $password);
+    public function __construct( string $host, string $db_name, string $user, string $password) {
+        parent::__construct( $host, $db_name, $user, $password);
     }
 
-    public function emailCanBeAdd( $email, &$emailErr  ) {
-        $this->sql = "SELECT id FROM users WHERE email=:email";;
+    public function email_can_be_add( $email, &$email_err  ) {
+        $this->sql = "SELECT id FROM users WHERE email=:email";
 
         if( $stmt = $this->db->prepare( $this->sql ) ) {
             $stmt->bindParam( ":email", $email );
@@ -17,18 +17,20 @@ class UserManagement extends ConnectDB {
             if ( $stmt->execute() ) {
 
                 if ( $stmt->rowCount() > 0 ) {
-                    $emailErr = 'There is already account that is using this email';
+                    $email_err = 'There is already account that is using this email';
                     return false;
                 } else {
                     return true;
                 }
             } else {
-                echo "Something went wrong" . __FILE__ . ". Line: " . __LINE;
+                echo "Something went wrong" . __FILE__ . ". Line: " . __LINE__;
             }
             unset( $stmt );
+        } else {
+            echo "siema";
         }
     }
-    public function usernameCanBeAdd( $username, &$usernameErr ) {
+    public function username_can_be_add( $username, &$username_err ) {
         $this->sql = "SELECT id FROM users WHERE username=:username";;
 
         if( $stmt = $this->db->prepare( $this->sql ) ) {
@@ -37,14 +39,14 @@ class UserManagement extends ConnectDB {
             if ( $stmt->execute() ) {
 
                 if ( $stmt->rowCount() > 0 ) {
-                    $usernameErr = 'There is already account that is using this username';
+                    $username_err = 'There is already account that is using this username';
                     return false;
                 } else {
                     return true;
                 }
                 unset( $this->stmt );
             } else {
-                echo "Something went wrong" . __FILE__ . ". Line: " . __LINE;
+                echo "Something went wrong" . __FILE__ . ". Line: " . __LINE__;
             }
 
         }
@@ -89,9 +91,9 @@ class UserManagement extends ConnectDB {
                             $id = $row['id'];
                             $email = $row['email'];
                             $username = $row['username'];
-                            $hasedPassword = $row['password'];
+                            $hased_password = $row['password'];
 
-                            if ( password_verify( $password, $hasedPassword )) {
+                            if ( password_verify( $password, $hased_password )) {
                                 echo "That's it";
 
                                 $_SESSION['loggedin'] = true;
@@ -113,7 +115,7 @@ class UserManagement extends ConnectDB {
         }
     }
 
-    public function checkIfCorrectPassword ( $id, $opassword, &$opasswordErr ) {
+    public function check_if_correct_password ( $id, $o_password, &$o_password_err ) {
         $this->sql = "SELECT password FROM users WHERE id=:id;";
 
         if ( $stmt = $this->db->prepare( $this->sql ) ) {
@@ -121,17 +123,17 @@ class UserManagement extends ConnectDB {
 
             if ( $stmt->execute() ) {
 
-                $hashedPassowrd = $stmt->fetch();
+                $hashed_passowrd = $stmt->fetch();
 
-                if ( !password_verify( $opassword, $hashedPassowrd['password'])) {
-                    $opasswordErr .= "You passed in wrong password. ";
+                if ( !password_verify( $o_password, $hashed_passowrd['password'])) {
+                    $o_password_err .= "You passed in wrong password. ";
                 } 
             }
             unset( $stmt );
         }
     }
 
-    public function updatePassword ( $id, $pass, &$info ) {
+    public function update_password ( $id, $pass, &$info ) {
         $this->sql = "UPDATE users SET password=:pass WHERE id=:id;";
 
         if ( $stmt = $this->db->prepare( $this->sql ) ) {

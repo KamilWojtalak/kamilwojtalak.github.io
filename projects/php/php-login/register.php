@@ -6,48 +6,48 @@
     require_once 'src/Validation.php';
     require_once 'src/UserManagement.php';
 
-    $initDB = new InitDB( DB_HOST, '', DB_USERNAME, DB_PASSWORD );
+    $init_db = new InitDB( DB_HOST, '', DB_USERNAME, DB_PASSWORD );
 
-    $initDB->connect();
-    $initDB->createDatabase( DB_NAME );
-    unset($initDB);
-    $initDB = new InitDB( DB_HOST, DB_NAME, DB_USERNAME, DB_PASSWORD );
-    $initDB->connect();
-    $initDB->createTable();
-    unset($initDB);
+    $init_db->connect();
+    $init_db->create_database( DB_NAME );
+    unset($init_db);
+    $init_db = new InitDB( DB_HOST, DB_NAME, DB_USERNAME, DB_PASSWORD );
+    $init_db->connect();
+    $init_db->create_table();
+    unset($init_db);
 
     // Start dealing with form
     if ( $_SERVER['REQUEST_METHOD'] == 'POST' ) {
         $email = trim( $_POST['email'] );
         $username = trim( $_POST['username'] );
         $password = trim( $_POST['password'] );
-        $rpassword = trim( $_POST['rpassword'] );
+        $r_password = trim( $_POST['rpassword'] );
 
-        $emailErr = $usernameErr = $passwordErr = $rpasswordErr = $generalErr = '';
+        $email_err = $username_err = $password_err = $r_password_err = $general_err = '';
 
         $valid = new Validation();
-        $valid->emptyV( $email, $emailErr );
-        $valid->emptyV( $username, $usernameErr );
-        $valid->emptyV( $password, $passwordErr );
-        $valid->emptyV( $rpassword, $rpasswordErr );
+        $valid->empty_v( $email, $email_err );
+        $valid->empty_v( $username, $username_err );
+        $valid->empty_v( $password, $password_err );
+        $valid->empty_v( $r_password, $r_password_err );
 
-        $valid->emailV( $email, $emailErr );
-        $valid->usernameV( $username, $usernameErr );
-        $valid->passwordV( $password, $passwordErr );
-        $valid->rpasswordV( $rpassword, $password, $rpasswordErr );
+        $valid->email_v( $email, $email_err );
+        $valid->username_v( $username, $username_err );
+        $valid->password_v( $password, $password_err );
+        $valid->r_password_v( $r_password, $password, $r_password_err );
 
         
-        if( empty( $emailErr ) && empty( $usernameErr ) && empty( $passwordErr ) && empty( $rpasswordErr ) ) {
+        if( empty( $email_err ) && empty( $username_err ) && empty( $password_err ) && empty( $r_password_err ) ) {
 
             $password = password_hash( $password, PASSWORD_DEFAULT );
 
-            $userManagement = new UserManagement( DB_HOST, DB_NAME, DB_USERNAME, DB_PASSWORD);
-            $userManagement->connect();
+            $user_management = new UserManagement( DB_HOST, DB_NAME, DB_USERNAME, DB_PASSWORD);
+            $user_management->connect();
 
-            if ( $userManagement->emailCanBeAdd( $email, $emailErr ) && $userManagement->usernameCanBeAdd( $username, $usernameErr ) ) {
-                $userManagement->register( $email, $username, $password );
+            if ( $user_management->email_can_be_add( $email, $email_err ) && $user_management->username_can_be_add( $username, $username_err ) ) {
+                $user_management->register( $email, $username, $password );
             } 
-            unset( $userManagement );
+            unset( $user_management );
         }
         unset( $valid );
     }
@@ -69,28 +69,28 @@
             <label for="email">Email:</label>
             <input type="email" name="email" id="email">
             <div class="">
-                <?php echo ( $emailErr ) ?? ''; ?>
+                <?php echo ( $email_err ) ?? ''; ?>
             </div>
         </div>
         <div class="">
             <label for="username">Username:</label>
             <input type="text" name="username" id="username">
             <div class="">
-                <?php echo ( $usernameErr ) ?? ''; ?>
+                <?php echo ( $username_err ) ?? ''; ?>
             </div>
         </div>
         <div class="">
             <label for="password">Password:</label>
             <input type="password" name="password" id="password">
             <div class="">
-                <?php echo ( $passwordErr ) ?? ''; ?>
+                <?php echo ( $password_err ) ?? ''; ?>
             </div>
         </div>
         <div class="">
             <label for="rpassword">Repat password:</label>
             <input type="password" name="rpassword" id="rpassword">
             <div class="">
-                <?php echo ( $rpasswordErr ) ?? ''; ?>
+                <?php echo ( $r_password_err ) ?? ''; ?>
             </div>
         </div>
         <div class="">
@@ -98,7 +98,7 @@
         </div>
     </form>
     <div class="">
-        <a href="login.php">Log in</a>
+        <a href="login.php">Login</a>
     </div>
 </body>
 </html>
