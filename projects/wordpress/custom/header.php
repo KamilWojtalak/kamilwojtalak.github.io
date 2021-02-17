@@ -69,3 +69,13 @@ if ( is_home() ) {
         </ul>
     </div>
 </nav>
+
+<?php if ( file_exists(get_header_image()) ) : ?>
+
+<div class="custom-header">
+    <a href="<?php echo esc_url( home_url() ); ?>" class="custom-header__link">
+        <img src="<?php header_image(); ?>" alt="" class="custom-header__image" width="<?php echo absint( get_custom_header()->width ); ?>" height="<?php echo absint( get_custom_header()->height ); ?>">
+    </a>
+</div>
+
+<?php endif; ?>

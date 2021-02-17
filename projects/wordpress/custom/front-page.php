@@ -1,7 +1,11 @@
 <?php
 
 get_header();
-
+    echo "<br>";
+    echo "File URI: ". get_theme_file_uri();
+    echo "<br>";
+    echo "File Path: ". get_theme_file_path();
+    echo "<br>";
 // the_content();
 // get_template_part( "inc/template-parts/the-loop" );
 $post_query = new WP_Query( array( 
@@ -15,11 +19,13 @@ if ( $post_query->have_posts() ) :
     echo "<br>";
     echo "Poczatek posta";
     echo "<br>";
-    echo the_title();
+    ?>
+    <a href="<?php echo the_permalink(); ?>"><?php echo the_title(); ?></a>
+    <?php
     echo "<br>";
     echo the_excerpt();
-    echo "<br>";
-    echo the_permalink();
+    echo "<br> Permalink: ";
+    echo get_permalink();;
     echo "<br>";
     echo "Koniec posta";
     echo "<br>";
