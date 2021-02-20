@@ -52,6 +52,7 @@ if ( !function_exists( 'custom_load_scripts_styles' ) ) {
     function custom_load_scripts_styles() {
         // styles
         wp_enqueue_style( 'style', get_theme_file_uri() . '/style.css', array(), '1.0', 'all');
+        wp_enqueue_style( 'custom', get_theme_file_uri() . '/assets/css/custom.css', array(), '1.0', 'all');
         // scripts
         wp_enqueue_script( 'main', get_theme_file_uri() . '/assets/js/main.js', array(), '1.0', true);
 
@@ -59,4 +60,21 @@ if ( !function_exists( 'custom_load_scripts_styles' ) ) {
 
     add_action( 'wp_enqueue_scripts', 'custom_load_scripts_styles');
 }
+
+if ( !function_exists( 'custom_regsiter_sidebar' ) ) {
+    function custom_regsiter_sidebar() {
+        register_sidebar( array(
+            'name' => __( 'Custom sidebar name!', 'custom' ),
+            'id' => 'custom-sidebar',
+            'description' => __( 'Custom sidebar description', 'custom' ),
+            'class' => 'class__class',
+            'before_widet' =>'<div class="widget">',
+            'after_widget' =>'</div>',
+            'before_title' =>'<h3 class="widget__title">',
+            'after_title' =>'</h3>',
+        ) );
+    }
+}
+
+add_action( 'widgets_init', 'custom_regsiter_sidebar' );
 

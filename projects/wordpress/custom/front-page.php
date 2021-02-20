@@ -60,4 +60,16 @@ echo "<br>";
 wp_list_categories();
 wp_list_pages();
 
+
+if ( is_active_sidebar( 'custom-sidebar' ) ) :
+    get_sidebar( 'custom-sidebar' );
+endif;
+
+get_search_form();
+wp_get_archives();
+wp_register();
+if ( is_user_logged_in() ) :
+    wp_loginout();
+endif;
+
 get_footer();
