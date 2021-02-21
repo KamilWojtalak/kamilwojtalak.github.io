@@ -12,6 +12,35 @@
 </head>
 <body <?php body_class(); ?>>
 
+<p>-- Custom Logo Menu --</p>
+<?php
+if ( has_custom_logo() )  :
+    the_custom_logo();
+    else :
+        echo blogingo( 'name' );
+endif;
+?>
+<p>-- Custom Logo Menu --</p>
+
+
+<p>-- Header Menu --</p>
+<?php
+if ( !empty( wp_nav_menu() ) ) :
+    wp_nav_menu( array(
+        'theme_location' => 'header__menu'
+    ) );
+endif;
+?>
+<p>-- Header Menu --</p>
+
+<p>-- Get all registered menus --</p>
+<?php
+    foreach( get_registered_nav_menus() as $item => $value ) {
+        echo "<p>$item => $value</p>";
+    }
+?>
+<p>-- Get all registered menus --</p>
+
 <?php
 if ( is_home() ) {
     echo "<br>";

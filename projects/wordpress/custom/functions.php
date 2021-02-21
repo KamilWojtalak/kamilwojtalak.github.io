@@ -43,6 +43,21 @@ function custom_setup() {
     ) );
  
     add_theme_support( 'post-formats', array ( 'aside', 'gallery', 'quote', 'image', 'video' ) );
+
+    register_nav_menus( array(
+        'header_menu' => __( 'Header Menu', 'custom' ),
+        'footer_menu' => __( 'Footer Menu', 'custom' ),
+    ) );
+
+    $custom_logo_args = array(
+        'height' => 200,
+        'width' => 400,
+        'flex-height' => true,
+        'flex-width' => true,
+        'header-text' => array( __('Custom Title'), __('Custom description') ),
+    );
+
+    add_theme_support( 'custom-logo', $custom_logo_args );
 }
     add_action( 'after_setup_theme', 'custom_setup' );
 }

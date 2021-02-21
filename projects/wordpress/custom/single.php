@@ -1,10 +1,14 @@
 <?php
-
+wp_reset_postdata();
 get_header();
 if ( have_posts() ) :
-    while ( have_posts() ) : the_post();
+     the_post();
+    ?>
+    <div <?php post_class(); ?> >
+    <?php
         echo "<br>";
-        echo the_tilte( '<h1>', '</h1>' );
+        echo the_post_thumbnail( );
+        echo the_title( '<h1>', '</h1>' );
         echo "<br>";
         echo the_content();
         echo "<br>";
@@ -25,15 +29,36 @@ if ( have_posts() ) :
         echo the_tags();
         echo "<br>";
         echo the_time();
-    endwhile;
+        // wp_link_pages();
+
+        echo next_posts_link( 'Older Entries'  );
+        echo previous_posts_link( 'Newer Entries' );
+    ?>
+        </div>
+        <div class="nav-previous alignleft"><?php echo get_next_posts_link( 'Older posts' ); ?></div>
+ 
+ 
+ 
+ <div class="nav-next alignright"><?php previous_post_link( '%link', '<-- Newer Posts' ); ?></div>
+
+<div class="nav-previous alignleft"><?php echo next_post_link( '%link', 'Older Posts -- >' ); ?></div>
+ 
+ 
+ 
+
+    <div class="">-- Comments --</div>
+    <?php
+    if ( comments_open() || get_comments_number() ) :
+        comments_template();
+    endif;
+    ?>
+    <div class="">-- Comments --</div>
+
+    <?php
 else : 
     _e( 'Something went wrong, no post matched', 'custom' );
 
-    echo next_post_link();
-    echo previous_post_link();
 endif;
-
-
-
+wp_reset_postdata(); 
 
 get_footer();
