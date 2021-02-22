@@ -7,7 +7,7 @@ if ( have_posts() ) :
     <div <?php post_class(); ?> >
     <?php
         echo "<br>";
-        echo the_post_thumbnail( );
+        // echo the_post_thumbnail( );
         echo the_title( '<h1>', '</h1>' );
         echo "<br>";
         echo the_content();
@@ -29,8 +29,26 @@ if ( have_posts() ) :
         echo the_tags();
         echo "<br>";
         echo the_time();
-        // wp_link_pages();
+        echo "<br>";
+        echo "GET POSTS";
+        echo "<br>";
+        $args = array(
+            'post_parent'    => get_the_ID(),
+            'post_type'      => 'attachment', 
+        );
+        $attachments = get_posts( $args );
 
+        if ( !empty( $attachments ) ) {
+            print_r($attachments);
+            foreach( $attachments[0] as $key => $value ) {
+                echo "Key: $key => Value: $value";
+                echo "<br>";
+            }
+        } else {
+            echo "Empty";
+        }
+        echo "GET POSTS";
+        echo "<br>";
         echo next_posts_link( 'Older Entries'  );
         echo previous_posts_link( 'Newer Entries' );
     ?>

@@ -17,8 +17,16 @@ if ( have_posts() ) :
     endwhile;
 
     ?>
+    <div class="">NEXT PREVIOUS POST LINK</div>
     <div class=""><?php next_posts_link( 'Newer posts' );?></div>
     <div class=""><?php previous_posts_link( 'Older posts' );?></div>
+    <div class="">NEXT PREVIOUS POST LINK</div>
+    <div class="">POSTS NAV LINK</div>
+    <?php posts_nav_link(); ?>
+    <div class="">POSTS NAV LINK</div>
+    <div class="">THE POSTS PAGINATION</div>
+    <?php the_posts_pagination(); ?>
+    <div class="">THE POSTS PAGINATION</div>
     <?php
 endif;
 
