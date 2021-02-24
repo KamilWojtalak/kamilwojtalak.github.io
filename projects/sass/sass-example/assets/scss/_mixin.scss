@@ -1,0 +1,11 @@
+@mixin center-left($left) {
+    position: absolute;
+    top: 50%;
+    left: $left;
+    transform: translateY(-50%) translateX(-50%);
+}
+
+@mixin dim($px) {
+    width: $px;
+    height: $px;
+}

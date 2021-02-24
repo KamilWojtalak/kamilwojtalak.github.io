@@ -1,0 +1,18 @@
+# 301 REDIRECT HTTP TO HTTPS AND WWW TO NON-WWW
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteCond %{HTTPS} off [OR]
+RewriteCond %{HTTP_HOST} ^www\. [NC]
+RewriteCond %{HTTP_HOST} ^(?:www\.)?(.+)$ [NC]
+RewriteRule ^ https://%1%{REQUEST_URI} [L,NE,R=301]
+</IfModule>
+
+RewriteCond %{THE_REQUEST} ^GET.*index\.php [NC]
+RewriteRule (.*?)index\.php/*(.*) /$1$2 [R=301,NE,L]
+
+Options -Indexes
+ErrorDocument 403 https://esperalkatowice.pl
+ErrorDocument 404 https://esperalkatowice.pl
+
+Redirect 301 /esperal-piekary-slaskie-swietochlowice/ https://esperalkatowice.pl/esperal-piekary-slaskie-sosnowiec/
+Redirect 301 /esperal-czestochowa/ https://esperalkatowice.pl/esperal-wszywka-alkoholowa-czestochowa/

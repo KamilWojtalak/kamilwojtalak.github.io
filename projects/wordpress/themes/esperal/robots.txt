@@ -1,0 +1,3 @@
+Sitemap: https://esperalkatowice.pl/sitemap.xml
+User-agent:*
+Disallow:

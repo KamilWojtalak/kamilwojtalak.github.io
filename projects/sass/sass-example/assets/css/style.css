@@ -1,0 +1,33 @@
+body .box2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  background-color: #ffb3b3;
+  min-height: 100vh;
+}
+body .box1 {
+  background-color: #1a0303;
+}
+body .box2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  width: 200px;
+  height: 200px;
+  background-color: #1a0303;
+  color: #ffb3b3;
+}
+
+/*# sourceMappingURL=style.css.map */
