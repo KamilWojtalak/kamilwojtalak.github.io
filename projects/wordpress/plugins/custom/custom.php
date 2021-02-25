@@ -1,3 +1,4 @@
+<?php
 /**
  * Plugin Name:       Custom
  * Description:       Custom plugin.
@@ -8,58 +9,159 @@
  * Text Domain:       custom
  * Domain Path:       /languages
  */
-<?php
-function custom_setup() {
+function pcustom_setup() {
     // styles
 
-    wp_enqueue_style( 'custom-style', plugin_url('style.css', __DIR__ . 'style.css'), array(), 1.0, 'all' );
+    wp_enqueue_style( 'custom-style', plugins_url('style.css', __DIR__ . 'style.css'), array(), 1.0, 'all' );
 
     // scripts
-    wp_enqueue_style( 'custom-script', plugin_url('script.js', __DIR__ . 'script.js'), array(), 1.0, true );
+    wp_enqueue_style( 'custom-script', plugins_url('script.js', __DIR__ . 'script.js'), array(), 1.0, true );
 
 }
 
-function custom_post_type() {
+function pcustom_post_type() {
     register_post_type( 'book', ['public' => true ] );
 }
 
-add_action( 'init', 'custom_post_type' );
+add_action( 'init', 'pcustom_post_type' );
 
-function custom_activate() {
-    custom_setup();
-    custom_post_type();
+// function pcustom_add_settings_section() {
+//     $c = "<div>";
+//     $c .= "Siehehehma to jest callback z add_settings_section";
+//     $c .= "</div>";
+
+//     return $c;
+// }
+
+// function pcustom_add_settings_field() {
+//     $c = "<div>";
+//     $c .= "Siehehehma to jest callback z add_settings_field";
+//     $c .= "</div>";
+
+//     return $c;
+// }
+// function pcustom_settings() {
+//     register_setting( 'privacy', 'pcustom_siema', array(
+//         'type' => 'string',
+//         'description' => 'Siema description...',
+//         'sanitize_callback' => '',
+//         'show_int_rest' => true,
+//         'default' => 'privacy',
+//     ) );
+
+//     add_settings_section( 'pcustom_section', 'Custom Settings Section Title', 'pcustom_add_settings_section', 'privacy' );
+
+//     add_settings_field( 'pcustom_field', 'Custom Settings Field Title', 'pcustom_add_settings_field', 'privacy', 'pcustom_section', array() );
+
+//     do_settings_sections( 'privacy' );
+//     do_settings_fields( 'privacy', 'pcustom_section' );
+
+// }
+
+// add_action( 'admin_init', 'pcustom_settings' )
+
+function pcustom_activate() {
+    pcustom_setup();
+    pcustom_post_type();
     flush_rewrite_rules();
+
+
+
 }
 
-register_activate_hook( __FILE__, 'custom_activate' );
+register_activation_hook( __FILE__, 'pcustom_activate' );
 
-function custom_deactivate() {
-    unregsiter_post_type( 'book' );
+function pcustom_deactivate() {
+    unregister_post_type( 'book' );
     flush_rewrite_rules();
+
+    unregister_setting( 'privacy', 'pcustom_siema' );
 }
 
-register_deactivate_hook( __FILE__, 'custom_deactivate' );
+register_deactivation_hook( __FILE__, 'pcustom_deactivate' );
 
-register_uninstall_hook( __FILE__, 'custom__uninstall' );
+register_uninstall_hook( __FILE__, 'pcustom__uninstall' );
 
 // Additional Parameters #
 
-// function custom_callback() {
+// function pcustom_callback() {
 
 // }
 
-// add_action( 'init', 'custom_callback', 11, 0 );
+// add_action( 'init', 'pcustom_callback', 11, 0 );
 
 // Number of Arguments #
 
-// function custom_wporg_custom( $id, $post ) {
+// function pcustom_pcustom_custom( $id, $post ) {
 
 // }
 
-// add_action( 'save_post', 'custom_wporg_custom', 10, 2 );
+// add_action( 'save_post', 'pcustom_pcustom_custom', 10, 2 );
 
-// function custom_filter_title( $title ) {
+// function pcustom_filter_title( $title ) {
 //     return "The $title was filtered!";
 // }
 
-// add_filter( 'the_title', 'custom_filter_table', 10, 1 );
+// add_filter( 'the_title', 'pcustom_filter_table', 10, 1 );
+
+function pcustom_siema_cb( $atts, $content ) {
+    if ( shortcode_exists( 'pcustom_siehehehma' ) ) {
+        $c = "<div>Siema: $content" . do_shortcode( 'pcustom_siehehehma' ) ."</div>";
+    } else {
+        $c = "<div>Siema: $content</div>";
+    }
+ 
+    return $c;
+}
+
+add_shortcode( 'pcustom_siema', 'pcustom_siema_cb' );
+
+if ( shortcode_exists( 'pcustom_siema' ) ) {
+    remove_shortcode( 'pcustom_siema' );
+}
+
+
+
+function pcustom_settings_init() {
+    // register a new setting for "writing" page
+    register_setting('writing', 'pcustom_setting_name');
+ 
+    // register a new section in the "writing" page
+    add_settings_section(
+        'pcustom_settings_section',
+        'pcustom Settings Section', 'pcustom_settings_section_callback',
+        'writing'
+    );
+ 
+    // register a new field in the "pcustom_settings_section" section, inside the "writing" page
+    add_settings_field(
+        'pcustom_settings_field',
+        'pcustom Setting', 'pcustom_settings_field_callback',
+        'writing',
+        'pcustom_settings_section'
+    );
+}
+ 
+/**
+ * register pcustom_settings_init to the admin_init action hook
+ */
+add_action('admin_init', 'pcustom_settings_init');
+ 
+/**
+ * callback functions
+ */
+ 
+// section content cb
+function pcustom_settings_section_callback() {
+    echo '<p>pcustom Section Introduction.</p>';
+}
+ 
+// field content cb
+function pcustom_settings_field_callback() {
+    // get the value of the setting we've registered with register_setting()
+    $setting = get_option('pcustom_setting_name');
+    // output the field
+    ?>
+    <input type="text" name="pcustom_setting_name" value="<?php echo isset( $setting ) ? esc_attr( $setting ) : ''; ?>">
+    <?php
+}
