@@ -71,14 +71,16 @@ function pcustom_activate() {
 
 register_activation_hook( __FILE__, 'pcustom_activate' );
 
-function pcustom_deactivate() {
+function pcustom_deactivation() {
     unregister_post_type( 'book' );
     flush_rewrite_rules();
 
     unregister_setting( 'privacy', 'pcustom_siema' );
+
+    remove_menu_page( 'custom' );
 }
 
-register_deactivation_hook( __FILE__, 'pcustom_deactivate' );
+register_deactivation_hook( __FILE__, 'pcustom_deactivation' );
 
 register_uninstall_hook( __FILE__, 'pcustom__uninstall' );
 
@@ -163,5 +165,121 @@ function pcustom_settings_field_callback() {
     // output the field
     ?>
     <input type="text" name="pcustom_setting_name" value="<?php echo isset( $setting ) ? esc_attr( $setting ) : ''; ?>">
+    <?php
+}
+
+function custom_options_page_display() {
+    ?>
+    <div class="wrap">
+    <h1><?php echo esc_html( get_admin_page_title() );?></h1>
+    <form action="options.php" method="post">
+    <div class="">Siehehema Description</div>
+    <?php
+        settings_fields( 'custom_options' );
+        do_settings_sections( 'custom' );
+        submit_button( __( 'Save button', 'custom' ) );
+    ?>
+    </form>
+    </div>
+    <?php
+}
+
+function custom_options_page_submit() {
+
+}
+
+add_action( 'admin_menu', 'custom_options_page' );
+function custom_options_page() {
+    add_menu_page(
+        'Custom Page',
+        'Custom Page',
+        'manage_options',
+        'custom',
+        'custom_options_page_display',
+        '',
+        '20',
+
+    );
+}
+
+function custom_submenu_display() {
+    if (!current_user_can( 'manage_options' ) ) {
+        return;
+    }
+
+    ?>
+
+    <div class="wrap">
+        <h1><?php echo esc_html( get_admin_page_title() ); ?></h1>
+        <form action="action.php" method="post">
+            <?php
+                settings_fields( 'custom_options' );
+                do_settings_sections( 'custom_options' );
+                submit_button( __( 'Submit button', 'custom' ) );
+            ?>
+        </form>
+    </div>
+    <?php
+}
+
+add_action( 'admin_menu', 'custom_submenu' );
+
+function custom_submenu() {
+    add_submenu_page(
+        'custom',
+        'Custom Subpage',
+        'Custom Subpage',
+        'manage_options',
+        'custom_sub',
+        'custom_submenu_display',
+    );
+}
+
+add_action( 'admin_init', 'custom_add_setting' );
+
+function custom_add_setting() {
+    register_setting(
+        'general',
+        'custom_setting',
+        array(
+            'type' => 'string',
+            'Description' => 'Description',
+            'default' => 'default_custom_setting',
+        )
+    );
+
+    add_settings_section(
+        'custom_settings_section',
+        'Custom Settings Section',
+        'custom_settings_section_display',
+        'general',
+    );
+
+    add_settings_field(
+        'custom_settings_field',
+        'Custom Settings Field',
+        'custom_settings_field_display',
+        'general',
+        'custom_settings_section',
+        array(
+
+        )
+    );
+}
+
+function custom_settings_section_display() {
+    echo "<div><b>Custom setting section</b></div>";
+}
+
+function custom_settings_field_display() {
+    ?>
+        <div class="">
+            <h2>Settings field</h2>
+                <?php
+                    $custom_setting = get_option( 'custom_setting' );
+                ?>
+
+                <input type="text" name="custom_setting" value="<?php echo isset( $custom_setting) ? esc_attr( $custom_setting ) : ''; ?>">
+        </div>
     <?php
 }
