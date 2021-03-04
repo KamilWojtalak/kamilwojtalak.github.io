@@ -4,7 +4,7 @@ class Database{
  
     // specify your own database credentials
     private $host = "localhost";
-    private $db_name = "shop_cart_mysql_1";
+    private $db_name = "con_shop_cart";
     private $username = "root";
     private $password = "";
     public $conn;
