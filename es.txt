@@ -4,3 +4,9 @@ przemebluj jsa
 defaltowe obrazki technologii
 glownie php i js, tam gdzie nie ma stylów i nie ma czym się za dużo chwalić wyglądem,
 serverowe języki przekierowywują do githuba
+
+
+
+yyy
+dwie podstrony będą
+portoflio i sandpit

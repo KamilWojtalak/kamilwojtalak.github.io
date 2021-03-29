@@ -1,0 +1,244 @@
+@font-face {
+  font-family: "Sacramento";
+  src: url("/assets/fonts/Sacramento-Regular.ttf");
+}
+@font-face {
+  font-family: "Rubik";
+  src: url("/assets/fonts/Rubik-VariableFont_wght.ttf");
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+}
+
+/* ================================================================= */
+/* Front Page */
+/* ================================================================= */
+body,
+a {
+  color: #fff;
+}
+
+.front {
+  display: flex;
+}
+@media screen and (max-width: 850px) {
+  .front {
+    flex-flow: column wrap;
+  }
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-flow: column nowrap;
+  flex: 50%;
+  height: 100vh;
+  text-decoration: none;
+  transition: 0.2s;
+}
+@media screen and (max-width: 850px) {
+  .card {
+    flex: initial;
+    height: 50vh;
+  }
+}
+.card:nth-child(1) {
+  background-color: #1B1E25;
+}
+.card:nth-child(2) {
+  background-color: #387683;
+}
+.card:hover {
+  opacity: 0.9;
+}
+.card:hover .card__p {
+  text-decoration: underline;
+}
+
+.card__title,
+.card__p {
+  left: 50%;
+  text-align: center;
+  font-weight: bolder;
+}
+
+.card__title,
+h1 {
+  padding-top: 100px;
+  font-family: Sacramento, sans-serif;
+  font-size: 72px;
+}
+@media screen and (max-width: 850px) {
+  .card__title,
+h1 {
+    padding-top: 30px;
+  }
+}
+
+.card__p,
+p,
+a {
+  font-family: Rubik, sans-serif;
+}
+
+.card__p {
+  position: absolute;
+  transform: translateX(-50%) translateY(-50%);
+  top: 50%;
+  font-size: 64px;
+  align-self: center;
+  justify-self: center;
+}
+@media screen and (max-width: 850px) {
+  .card__p {
+    font-size: 30px;
+    top: 60%;
+  }
+}
+
+.card__p_small {
+  font-size: 36px;
+}
+@media screen and (max-width: 850px) {
+  .card__p_small {
+    font-size: 28px;
+  }
+}
+
+/* ================================================================= */
+/* Front Page */
+/* ================================================================= */
+/* ================================================================= */
+/* Portfolio & Sandpit */
+/* ================================================================= */
+.portfolio {
+  background-color: #1B1E25;
+}
+
+.sandpit {
+  background-color: #387683;
+}
+
+.portfolio,
+.sandpit {
+  text-align: center;
+  position: relative;
+}
+
+.standalone__img {
+  width: 30px;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+}
+
+.standalone_rotate {
+  transform: rotate(180deg);
+}
+
+/* ================================================================= */
+/* Portfolio & Sandpit */
+/* ================================================================= */
+/* ================================================================= */
+/* Portfolio  */
+/* ================================================================= */
+.portfolio__main {
+  width: 90%;
+  max-width: 1400px;
+  margin: 0 auto 100px auto;
+}
+
+.portfolio__container .container__title {
+  font-size: 48px;
+  padding: 100px 0 50px 0;
+}
+.portfolio__container .container__box {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 500px));
+  justify-content: center;
+  gap: 100px;
+}
+.portfolio__container .container__item {
+  display: block;
+  text-decoration: none;
+  transition: 0.3s;
+  overflow: hidden;
+  width: 100%;
+}
+.portfolio__container .container__item:hover {
+  text-decoration: underline;
+}
+.portfolio__container .container__item:hover .item__image {
+  transform: scale(1.2);
+}
+.portfolio__container .item__image-wrapper {
+  max-width: 500px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.portfolio__container .item__image {
+  transition: 0.3s;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+.portfolio__container .item__p {
+  padding: 30px 0 0 0;
+}
+
+.sandpit__container .container__title {
+  font-size: 48px;
+  padding: 100px 0 50px 0;
+}
+.sandpit__container .container__item {
+  display: block;
+  text-decoration: none;
+  transition: 0.3s;
+  overflow: hidden;
+  width: 100%;
+}
+.sandpit__container .container__item:hover {
+  text-decoration: underline;
+}
+/* ================================================================= */
+/* Portfolio  */
+/* ================================================================= */
+/* ================================================================= */
+/* Sandpit */
+/* ================================================================= */
+.sandpit__main {
+  width: 90%;
+  max-width: 1400px;
+  margin: 0 auto 100px auto;
+}
+
+.sandpit__container .container__box {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 350px));
+  gap: 50px;
+  justify-content: center;
+}
+.sandpit__container .container__item {
+  display: block;
+  text-decoration: none;
+  transition: 0.3s;
+  overflow: hidden;
+  width: 100%;
+  color: #6C6557;
+  background-color: #A5B896;
+}
+.sandpit__container .container__item:hover {
+  text-decoration: underline;
+}
+.sandpit__container .item__p {
+  padding: 30px 50px;
+}
+
+/* ================================================================= */
+/* Sandpit */
+/* ================================================================= */
+
+/*# sourceMappingURL=style.css.map */

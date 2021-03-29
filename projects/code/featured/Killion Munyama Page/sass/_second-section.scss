@@ -1,0 +1,50 @@
+.section__first-part {
+    @media (min-width: $breakpoint-laptop) {
+        min-height: 70vh;
+    }
+    .first-part__list {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        text-decoration: underline;
+        text-transform: uppercase;
+        font-size: 22px;
+        padding: 50px 0;
+        @media (min-width: $breakpoint-laptop) {
+            padding: 100px 0;
+        }
+
+        .first-part__item {
+            padding: 15px 0;
+
+            .first-section__link {
+                display: block;
+            }
+        }
+    }
+}
+
+.section__place-for-description {
+
+    .description__container {
+        color: #F90;
+        text-align: center;
+        font-size: 20px;
+        height: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .second-part__image {
+        min-width: 100%;
+        max-width: 100%;
+        object-fit: cover;
+        @media (min-width: $breakpoint-laptop) {
+            min-height: 100%;
+        }
+    }
+}
