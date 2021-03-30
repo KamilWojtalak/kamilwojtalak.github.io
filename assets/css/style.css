@@ -227,14 +227,17 @@ a {
   transition: 0.3s;
   overflow: hidden;
   width: 100%;
-  color: #6C6557;
-  background-color: #A5B896;
+  color: #141915;
+  border-radius: 5px;
+  background-color: #5E92A6;
 }
 .sandpit__container .container__item:hover {
   text-decoration: underline;
+  background-color: #71acc4;
 }
 .sandpit__container .item__p {
   padding: 30px 50px;
+  text-transform: capitalize;
 }
 
 /* ================================================================= */

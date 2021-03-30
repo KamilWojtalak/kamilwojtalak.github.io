@@ -266,17 +266,19 @@ a {
         transition: .3s;
         overflow: hidden;
         width: 100%;
-        color: #6C6557;
+        color: #141915;
+        border-radius: 5px;
 
-
-        background-color: #A5B896;
+        background-color: #5E92A6;
         &:hover {
             text-decoration: underline;
+            background-color: #71acc4;
         }
     }
     
     .item__p {
         padding: 30px 50px;
+        text-transform: capitalize;
     }
 }
 
