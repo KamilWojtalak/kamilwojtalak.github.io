@@ -1,0 +1,7 @@
+v2 I m not a robot
+6LfvipUaAAAAAJpq5HFYVOM4ZHzgQw48hD9e0Ts0
+6LfvipUaAAAAAB5PbWaPl3Mc7oiXYm94skdDlcri
+
+v3
+site key 6LeniZUaAAAAALSNgnqS7lzrQmefUgGm8KY9B1hz
+secret key 6LeniZUaAAAAAMh6Mwkv1pPg0azDSUPI7Rjg1UU7
