@@ -56,6 +56,9 @@ CreateDOM.addProject(php, 'php/php-login', 'PHP login', true);
 CreateDOM.addProject(php, 'php/phppot-rest', 'PHP REST API', true);
 CreateDOM.addProject(php, 'php/php-login-2', 'PHP Login 2', true);
 CreateDOM.addProject(php, 'php/upload-file', 'PHP upload files', true);
+const recaptcha = CreateDOM.createSection('reCAPTCHA');
+CreateDOM.addProject(recaptcha, 'recaptcha/google-recaptchav2.1', 'PHP Google reCAPTCHAv2.1', true);
+CreateDOM.addProject(recaptcha, 'recaptcha/google-recaptchav3', 'PHP Google reCAPTCHAv3', true);
 const websites = CreateDOM.createSection('Websites');
 CreateDOM.addProject(websites, 'frontend/projekt-testowy', 'Recrutation Project', false);
 CreateDOM.addProject(websites, 'frontend/cuda-page', 'Cuda Page', false);
@@ -68,6 +71,7 @@ CreateDOM.addProject(websites, 'frontend/the-modernist-page', 'The Modernist Pag
 const bootstrap = CreateDOM.createSection('Bootstrap', false);
 CreateDOM.addProject(bootstrap, 'bootstrap/sample-page', 'Bootstrap Sample Page', false);
 const css = CreateDOM.createSection('CSS');
+CreateDOM.addProject(css, 'css/svg-animation', 'SVG Animations', false);
 CreateDOM.addProject(css, 'css/3d-cube', '3D CSS Cube', false);
 CreateDOM.addProject(css, 'css/css-shapes', 'Shapes made up with CSS', false);
 CreateDOM.addProject(css, 'css/dog-walkers-app', 'dog walkers app', false);

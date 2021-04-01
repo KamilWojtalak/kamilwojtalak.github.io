@@ -1,0 +1,102 @@
+$path1: #910039;
+$path2: #60FFB7;
+
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+svg {
+    /* background-color: red; */
+}
+
+.siema1 {
+    width: 300px;
+    height: auto;
+    cursor: pointer;
+    animation: fadeInUp 2s ease ;
+        #category,
+        #category_2,
+        #category_3,
+        #category_4,
+        #category_5,
+        #category_6 {
+            animation: leftRight 2s ease forwards infinite ;
+        }
+}
+@keyframes leftRight {
+    0% {
+        opacity: 0;
+        transform: translateX(-220%);
+    }
+    30% {
+        opacity: 1;
+        transform: translateX(20%);
+    }
+    50% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20%);
+    }
+    10% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 1;
+    }
+}
+.siema2 {
+    overflow: hidden;
+    height: 300px;
+    width: 300px;
+    #path1,
+    #path2,
+    #path3 {
+        transition: all .75s ease;
+    }
+    #path1,
+    #path3 {
+            opacity: .9;
+            fill: $path1;
+    }
+    #path1 {
+        // transform: translateX(-38%);
+        opacity: 0;
+        transform: translateX(-50%);
+    }
+    #path2 {
+        fill: $path2;
+        opacity: .9;
+    }
+    #path3 {
+
+    }
+
+    &:hover {
+
+        #path1 {
+            transform: translateX(-20%);
+            opacity: .9;
+        }
+        #path2 {
+            transform: translateX(20%);
+        }
+        #path3 {
+            transform: translateX(50%);
+            opacity: 0;
+        }
+    }
+}
