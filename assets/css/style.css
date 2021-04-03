@@ -130,9 +130,15 @@ a {
 
 .standalone__img {
   width: 30px;
-  position: absolute;
+  position: fixed;
   top: 30px;
   right: 30px;
+  opacity: 0.5;
+  transition: 0.5s;
+}
+
+.standalone__img:hover {
+  opacity: 1;
 }
 
 .standalone_rotate {

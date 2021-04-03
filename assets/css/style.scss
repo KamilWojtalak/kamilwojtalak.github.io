@@ -124,9 +124,16 @@ a {
 .standalone__img {
     width: 30px;
 
-    position: absolute;
+    position: fixed;
     top: 30px;
     right: 30px;
+
+    opacity: .5;
+
+    transition: .5s;
+}
+.standalone__img:hover {
+    opacity: 1;
 }
 .standalone_rotate {
     transform: rotate(180deg);

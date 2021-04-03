@@ -78,7 +78,11 @@ CreateDOM.addProject(css, 'css/dog-walkers-app', 'dog walkers app', false);
 CreateDOM.addProject(css, 'css/fylo', 'Fylo CSS', false);
 CreateDOM.addProject(css, 'css/single-card', 'Single card CSS', false);
 CreateDOM.addProject(css, 'css/three-image', 'three images CSS', false);
+CreateDOM.addProject(css, 'css/animate-css', 'Using animate.CSS', false);//
+CreateDOM.addProject(css, 'css/css-animations', 'Playing with css animations', false);//
+CreateDOM.addProject(css, 'css/css-fade-in', 'Using CSS Fade in', false);//
 const js = CreateDOM.createSection('JavaScript');
+CreateDOM.addProject(js, 'javascript/aos', 'Using AOS animations', false);//
 CreateDOM.addProject(js, 'javascript/to-do-app', 'JavaScript To Do APP', false);
 CreateDOM.addProject(js, 'javascript/api', 'JS API', false);
 CreateDOM.addProject(js, 'javascript/balls', 'JS Canvas Balls', false);
