@@ -1,0 +1,1 @@
+<?php $y = new DateTime(); $y = $y->format('Y'); echo $y;?>
