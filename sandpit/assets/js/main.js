@@ -44,6 +44,7 @@ class CreateDOM {
 }
 
 const php = CreateDOM.createSection('PHP');
+CreateDOM.addProject(php, 'php/restapi', 'PHP REST API', true);
 CreateDOM.addProject(php, 'php/con-crud', 'PHP CRUD', true);
 CreateDOM.addProject(php, 'php/con-login-session', 'Login with sessions', true);
 CreateDOM.addProject(php, 'php/con-oop-crud', 'PHP OOP CRUD', true);
