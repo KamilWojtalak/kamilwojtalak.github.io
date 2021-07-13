@@ -1,5 +1,3 @@
-console.log('Siehehehema');
-
 const main = document.querySelector('.sandpit__main');
 const LINK = 'https://github.com/KamilWojtalak/kamilwojtalak.github.io/tree/master/sandpit/';
 
@@ -57,6 +55,8 @@ CreateDOM.addProject(php, 'php/php-login', 'PHP login', true);
 CreateDOM.addProject(php, 'php/phppot-rest', 'PHP REST API', true);
 CreateDOM.addProject(php, 'php/php-login-2', 'PHP Login 2', true);
 CreateDOM.addProject(php, 'php/upload-file', 'PHP upload files', true);
+const wp = CreateDOM.createSection('Wordpress');
+CreateDOM.addProject(wp, 'wordpress/wp-udemy', 'Wordpress Theme Development, WP REST API, Custom REST Rotes, Custom Post Types', true);
 const recaptcha = CreateDOM.createSection('reCAPTCHA');
 CreateDOM.addProject(recaptcha, 'recaptcha/google-recaptchav2.1', 'PHP Google reCAPTCHAv2.1', true);
 CreateDOM.addProject(recaptcha, 'recaptcha/google-recaptchav3', 'PHP Google reCAPTCHAv3', true);
